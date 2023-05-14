@@ -4,7 +4,7 @@
 
 ![Collect Mobile Money](collectMoneyExample.png)
 
-__*Let's simplify online payments for everyone! ... Feel Free to Contribute *__
+# Let's simplify online payments for everyone! ... Feel Free to Contribute
 >
  - Africa
  - The World
@@ -14,12 +14,24 @@ __*Let's simplify online payments for everyone! ... Feel Free to Contribute *__
     ### Status
     - TBA
 
-## LIVE & READY FOR USE
- - *Sparco* // for AIRTEL, MTN, & ZAMTEL  Instant mobile Money collections
- # SETUP
- 
- Follow the Setup Instructions [Here](./Examples/Sparco/ReadMe.md);
+## Available Providers
+ - ### Sparco
+    > 3.5% transaction fees
 
+    - [x] Collect mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  networks
+    - [x] Send money from your Sparco merchant Account to *MTN* & *ZAMTEL* Mobile Networks
+    - #### SETUP
+        - [x] Follow the Setup Instructions [Here](./Examples/Sparco/ReadMe.md);
+ - ### Airtel  
+    > 2% transaction fees
+    - [x] Collect mobile Money payments from *Airtel*  networks
+    - [x] Send money from your Airtel merchant Account to *Airtel* Mobile Networks
+    - #### SETUP
+        - Setup instructions to be added soon. However, you can begin by creating your account on the Official [Airtel Developer portal](https://developers.airtel.africa/home)
+        - [x] For now, follow the example Instructions [Here](./Examples/Airtel/collections.php);
+ 
+
+<hr />
 
 # This project was built/tested with
 
