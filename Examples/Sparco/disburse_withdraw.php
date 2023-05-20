@@ -1,10 +1,11 @@
 <?php
 /**
+ * @package MoneyUnify
  * A demonstration on how you can withdraw or transfer funds from your virtual account to any mobile number Using Sparco
  */
 
 
-include __DIR__.'/../core/MoneyUnify.php'; // path can change based on where your file is located
+include __DIR__.'/../../core/MoneyUnify.php'; // path can change based on where your file is located
 
 //Initiate MoneyUnify with a provider you're using
 $MoneyUnify = new MoneyUnify('Sparco');

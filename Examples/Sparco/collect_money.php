@@ -1,11 +1,12 @@
 <?php
 
 /**
+ * @package MoneyUnify
  * A demonstration on how you can collect money from a phone number purchasing products on your platform or website
  */
 
 
- include __DIR__.'/../core/MoneyUnify.php'; // path can change based on where your file is located
+ include __DIR__.'/../../core/MoneyUnify.php'; // path can change based on where your file is located
 
 //Initiate MoneyUnify with a provider you're using
 $MoneyUnify = new MoneyUnify('Sparco');
@@ -25,7 +26,7 @@ $provider->setCollectionDetails([
   "customer_last_name"=> "Mwanza",
   "customer_email"=> "mwanzabj@gmail.com",
   "purchase_info"=> "ATOMS MKBHD 251 SNEAKER",
-  "customer_mobile_number"=> "09xxxxxxxx",
+  "customer_mobile_number"=> "0971943638",
 ]);
 
 // Trigger request to collect funds from customer phone number

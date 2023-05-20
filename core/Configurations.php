@@ -21,6 +21,10 @@ class Configurations {
    * API public key
    */
   protected String $public_key;
+  /**
+   * Bearer token used for authorisation
+   */
+  protected String $bearer_token;
   /** 
    * link to verify payment -  used by: [sparco]
    * */ 
@@ -51,5 +55,7 @@ class Configurations {
    * credit/disbusements/sending details
    */
   protected Array $disbursement_details;
+
+  protected Array $errors;
 
 }

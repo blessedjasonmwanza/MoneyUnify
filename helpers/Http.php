@@ -4,7 +4,7 @@
  */
 trait Http
 {
-  function urlRequest(String $method= 'POST', String $url, Array | Null $headers, String $body_fields=null): mixed {
+  function urlRequest(String $method= 'POST', String $url, Array | String $headers = null, String | Array $body_fields=null): mixed {
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => $url,
