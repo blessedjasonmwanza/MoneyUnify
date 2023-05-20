@@ -1,4 +1,4 @@
-# MoneyUnify
+# [MoneyUnify](https://moneyunify.com)
 
 > Mobile Money Payments integration simplified
 
@@ -53,7 +53,8 @@
 
 # Author
 
-👤 **Blessed Jason Mwanza**
+👤 **Blessed Jason Mwanza** - [Buy me A Coffee](https://www.buymeacoffee.com/mwanzabj) 
+
 - Portfolio : [http://blessedjasonmwanza.me](http://blessedjasonmwanza.me)
 
 - LinkedIn: [Connect with me on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
