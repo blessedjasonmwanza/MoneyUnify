@@ -2,7 +2,21 @@
 
 > Mobile Money Payments integration simplified
 
-![Collect Mobile Money](collectMoneyExample.png)
+<table>
+ <tr>
+  <tr>
+   <th> Example using Airtel API - Official Airtel money API</th>
+   <th>Example using Sparco gateway - all networks mobile money</th>
+ </tr>
+  <td>
+   <img src="https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/fc38637e-b9e2-41d6-ae59-49540d50d9f4" title="Money Unify Airtel provider" alt="Money Unify Airtel provider">
+  </td>
+  <td>
+ <img src="collectMoneyExample.png"  title="Money Unify Sparco gateway provider example" alt="Money Unify Sparco gateway provider example"/>
+</td>
+  <tr>
+ </table>
+
 
 # Let's simplify online payments for everyone! ... Feel Free to Contribute
 >
