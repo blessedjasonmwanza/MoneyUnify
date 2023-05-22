@@ -29,13 +29,13 @@
     > 3.5% transaction fees
 
     - [x] Collect mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  networks
-    - [x] Send money from your Sparco merchant Account to *MTN* & *ZAMTEL* Mobile Networks
+    - [ ] Send money from your Sparco merchant Account to *MTN* & *ZAMTEL* Mobile Networks
     - #### SETUP
         - [x] Follow the Setup Instructions [Here](./Examples/Sparco/ReadMe.md);
  - ### Airtel  
     > 2% transaction fees
     - [x] Collect mobile Money payments from *Airtel*  networks
-    - [x] Send money from your Airtel merchant Account to *Airtel* Mobile Networks
+    - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks
     - #### SETUP
         - Setup instructions to be added soon. However, you can begin by creating your account on the Official [Airtel Developer portal](https://developers.airtel.africa/home)
         - [x] For now, follow the example Instructions [Here](./Examples/Airtel/collections.php);
