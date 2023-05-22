@@ -2,7 +2,7 @@
 
 ## How to Collect and Send Money Using MoneyUnify with a Sparco Merchant account
 
-  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements
+  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements in Zambia
 
  
  ## SETUP
@@ -72,16 +72,15 @@
 > If transaction request is successful, you will get a response like this one.
 ```json
 {
-	"isError": false,
-	"message": "Waiting for wallet holder to authorize debit transaction.",
-	"console":{
+    "isError": false,
+    "message": "Waiting for wallet holder to authorize debit transaction.",
+    "console":{
     "code": 201,
-    "reference": "eyJ0aWQiOjM1MTM1NSwiZW52IjoicCJ9",
-    "status": "TXN_AUTH_PENDING",
-    "transactionReference": "09xxxxxxxx_1640602121"
-  }
+        "reference": "eyJ0aWQiOjM1MTM1NSwiZW52IjoicCJ9",
+        "status": "TXN_AUTH_PENDING",
+        "transactionReference": "09xxxxxxxx_1640602121"
+    }
 }
-
 ```
 
 ## Error Message examples
@@ -90,12 +89,12 @@ If transaction request has failed, you will get a response like this one.
 
 ```json
 {
-	"isError": true,
-	"message": "request not authorized",
-	"console":
-	{
-		"responseCode": 403
-	}
+    "isError": true,
+    "message": "request not authorized",
+    "console":
+    {
+        "responseCode": 403
+    }
 }
 ```
 
