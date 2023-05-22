@@ -112,10 +112,33 @@ API works the same as collections above include required parameters. What change
 - **API Disbursement URL** ***https://api.moneyunify.com/sparco/send_money*** - *POST*
 
 
+<table>
+  <thead>
+    <tr>
+      <th>Jquery</th>
+      <th>Laravel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="./disburse/send_money_jquery.png"/>
+      </td>
+      <td>
+        <img src="./disburse/send_money_laravel.png"/>
+      </td>
+    </tr>
+   </tbody>
+</table>
+
+
+<br />
 
 # This project was built with
 
 - PHP 8
+
+
 
 # Author
 
