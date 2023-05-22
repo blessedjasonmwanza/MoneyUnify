@@ -14,7 +14,6 @@ include __DIR__.'/../helpers/Http.php';
 include __DIR__.'/../third-parties/php-jwt-6.5.0/src/JWT.php';
 Class MoneyUnify{
   const PROVIDERS = [
-    'sparco' => __DIR__.'/../providers/Sparco.php',
     'airtel' => __DIR__.'/../providers/Airtel.php',
   ];
 
