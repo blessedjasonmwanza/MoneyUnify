@@ -6,56 +6,63 @@
 
  
  ## SETUP
- - Create your account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab in order to obtain both your public and private keys
 
- - Follow the demo instructions/guide in the [Collect_money.php](collect_money.php) sample file and modify it with the correct information for collection of payments on your website
+-  Login to your Sparco your account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab and   order to obtain both your public and private/secret keys
 
- - You can also utilize the [Disburse / WithDraw](disburse_withdraw.php) sample file to learn how you can transfer money from your Virtual account after collection, to any mobile number. *Kindly note* After collection of payments from online clients, You'd have to wait for some 3 days or so in order to have your funds ready for disbursement. Contact the [Sparco Team](https://www.sparcopay.com/) for more information on this
+
+ - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above obtained keys to create your  muid (MoneyUnify ID)
+
+ <!-- - See examples in [Collect_money.php](collect_money.php) and pick from your favorite stack -->
+
+ <!-- - You can also utilize the [Disburse / WithDraw](disburse_withdraw.php) sample file to learn how you can transfer money from your Virtual account after collection, to any mobile number. *Kindly note* After collection of payments from online clients, You'd have to wait for some 3 days or so in order to have your funds ready for disbursement. Contact the [Sparco Team](https://www.sparcopay.com/) for more information on this -->
 <hr>
 
 ## Collecting online Mobile Payments [example]
+> Use your favourite stack 
 
-```php
-<?php
-
-/**
- * A demonstration on how you can collect money from a phone number purchasing products on your platform or website
- */
-
-
- include __DIR__.'/../core/MoneyUnify.php'; // path can change based on where your file is located
-
-//Initiate MoneyUnify with a provider you're using
-$MoneyUnify = new MoneyUnify('Sparco');
-
-//configure once_off setup details
-$provider = $MoneyUnify->config([
-  'mode' => 'live',
-  'private_key' => '123ws32ws',
-  'public_key' => '123s112',
-  "currency"=> "ZMW",
-]);
-
-// Set customer and order details
-$provider->setCollectionDetails([
-  "amount"=> 12.00,
-  "customer_first_name"=> "Blessed",
-  "customer_last_name"=> "Mwanza",
-  "customer_email"=> "mwanzabj@gmail.com",
-  "purchase_info"=> "ATOMS MKBHD 251 SNEAKER",
-  "customer_mobile_number"=> "09xxxxxxxx",
-]);
-
-// Trigger request to collect funds from customer phone number
-$payment_response_details = $provider->collect();
-
-var_dump($payment_response_details);
+<table>
+  <thead>
+    <tr>
+      <th>Jquery</th>
+      <th>Laravel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="./collect/JQuery.png"/>
+      </td>
+      <td>
+        <img src="./collect/Laravel.png"/>
+      </td>
+    </tr>
+   </tbody>
+</table>
 
 
-?>
+<table>
+  <thead>
+    <tr>
+      <th>Vanilla JS using (Axios)</th>
+      <th>JavaScript using (fetch)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="./collect/js axios.png"/>
+      </td>
+      <td>
+        <img src="./collect/JS fetch.png"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
-```
+
+
+
 <hr />
 
 ## Withdrawing, sending and disbursing to mobile numbers [example]
