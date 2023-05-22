@@ -28,10 +28,12 @@
  - ### Sparco
     > 3.5% transaction fees
 
+    > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
+
     - [x] Collect mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  networks
-    - [ ] Send money from your Sparco merchant Account to *MTN* & *ZAMTEL* Mobile Networks
+    - [x] Send money from your Sparco merchant Account to *MTN* & *ZAMTEL* Mobile Networks
     - #### SETUP
-        - [x] Follow the Setup Instructions [Here](./Examples/Sparco/ReadMe.md);
+        - [x] It's easy! Just follow the Setup Instructions [Here](./Examples/Sparco/ReadMe.md) - Comes with some examples 😃 />
  - ### Airtel  
     > 2% transaction fees
     - [x] Collect mobile Money payments from *Airtel*  networks
