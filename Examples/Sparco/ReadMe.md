@@ -2,7 +2,7 @@
 
 ## How to Collect and Send Money Using MoneyUnify with a Sparco Merchant account
 
-  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements in Zambia
+  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements **in Zambia**
 
  
  ## SETUP
@@ -105,6 +105,8 @@ If transaction request has failed, you will get a response like this one.
 
 ## Sending, Crediting / sending money to mobile networks[example]
 > Use your favourite stack to Transfer your collections to Zamtel or MTN Mobile networks in Zambia
+
+> Funds / Money in your merchant account can also be settled directly to your bank account
 
 API works the same as collections above include required parameters. What changes is the endpoint url. use the one below instead, for disbursements;
 - **API Disbursement URL** ***https://api.moneyunify.com/sparco/send_money*** - *POST*
