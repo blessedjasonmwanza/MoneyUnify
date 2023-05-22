@@ -18,7 +18,9 @@
 <hr>
 
 ## Collecting online Mobile Payments [example]
-> Use your favourite stack 
+> Use your favourite stack to collect money via USSD from customers in Zambia
+
+- **API Collection URL** ***https://api.moneyunify.com/sparco/request_payment*** - *POST*
 
 <table>
   <thead>
@@ -99,6 +101,15 @@ If transaction request has failed, you will get a response like this one.
 ```
 
 <hr />
+
+
+## Sending, Crediting / sending money to mobile networks[example]
+> Use your favourite stack to Transfer your collections to Zamtel or MTN Mobile networks in Zambia
+
+API works the same as collections above include required parameters. What changes is the endpoint url. use the one below instead, for disbursements;
+- **API Disbursement URL** ***https://api.moneyunify.com/sparco/send_money*** - *POST*
+
+
 
 # This project was built with
 
