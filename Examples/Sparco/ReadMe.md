@@ -65,65 +65,22 @@
 
 <hr />
 
-## Withdrawing, sending and disbursing to mobile numbers [example]
-
-
-```php
-
-<?php
-/**
- * A demonstration on how you can withdraw or transfer funds from your virtual account to any mobile number Using Sparco
- */
-
-
-include __DIR__.'/../core/MoneyUnify.php'; // path can change based on where your file is located
-
-//Initiate MoneyUnify with a provider you're using
-$MoneyUnify = new MoneyUnify('Sparco');
-
-//configure once_off setup details
-$provider = $MoneyUnify->config([
-  'mode' => 'live',
-  'private_key' => '123ws32ws',
-  'public_key' => '123s112',
-  "currency"=> "ZMW",
-]);
-
-// Set customer and order details
-$provider->setDisbursementDetails([
-  "amount"=> 12.00,
-  "destination_first_name"=> "Blessed",
-  "destination_last_name"=> "Mwanza",
-  "destination_email"=> "mwanzabj@gmail.com",
-  "transfer_description"=> "ATOMS MKBHD 251 SNEAKER",
-  "destination_mobile_number"=> "09xxxxxxxx",
-]);
-
-// Trigger request to collect funds from customer phone number
-$payment_response_details = $provider->disburse();
-
-var_dump($payment_response_details);
-
-
-?>
-
-```
-
-
 
 
 ## SUCCESS Message Examples
 
 > If transaction request is successful, you will get a response like this one.
-```php
- [
-   "code" => 201, 
-   "isError" => false, 
-   "message" => "Waiting for wallet holder to authorize debit transaction.", 
-   "reference" => "eyJ0aWQiOjM1MTM1NSwiZW52IjoicCJ9",  // this is used for transaction verification
-   "status" => "TXN_AUTH_PENDING", 
-   "transactionReference" => "09xxxxxxxx_1640602121" 
-];
+```json
+{
+	"isError": false,
+	"message": "Waiting for wallet holder to authorize debit transaction.",
+	"console":{
+    "code": 201,
+    "reference": "eyJ0aWQiOjM1MTM1NSwiZW52IjoicCJ9",
+    "status": "TXN_AUTH_PENDING",
+    "transactionReference": "09xxxxxxxx_1640602121"
+  }
+}
 
 ```
 
@@ -131,42 +88,18 @@ var_dump($payment_response_details);
 
 If transaction request has failed, you will get a response like this one.
 
-```php
-[
-  ["isError"]=>true
-  ["message"]=> "request not authorized"
-  ["responseCode"]=> 403
-]
+```json
+{
+	"isError": true,
+	"message": "request not authorized",
+	"console":
+	{
+		"responseCode": 403
+	}
+}
 ```
 
 <hr />
-
-##  Verify Payment Transaction [example]
-
-```php
-<?php
-
-/**
- * A demonstration on how you can collect money from a phone number purchasing products on your platform or website
- */
-
-
- include __DIR__.'/../core/MoneyUnify.php'; // path can change based on where your file is located
-
-//Initiate MoneyUnify with a provider you're using
-$MoneyUnify = new MoneyUnify('Sparco');
-
-//configure once_off setup details
-$provider = $MoneyUnify->config([
-  'mode' => 'live',
-  'private_key' => '123ws32ws',
-  'public_key' => '123s112',
-  "currency"=> "ZMW",
-]);
-
-$status_response = $provider->verify_payment($referenceString);
-
-```
 
 # This project was built with
 
