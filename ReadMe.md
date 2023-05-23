@@ -59,7 +59,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
       <td class="text-center">Coming Soon ⏰ </td>
       </tr>
       </tbody></table>
- - ### Airtel -  Available in over 15 African countries
+ - ### Airtel -  Available in over 15 African countries 😍
     > 2% - 2.5% transaction fees
     - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using **Airtel Mobile Money*
     - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks (coming soon)
