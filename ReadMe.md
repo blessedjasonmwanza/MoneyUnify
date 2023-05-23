@@ -2,30 +2,22 @@
 
 > Mobile Money Payments integration simplified
 
-<table>
- <tr>
-  <tr>
-   <th> Example using Airtel API - Official Airtel money API</th>
- </tr>
-  <td>
-   <img src="https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/fc38637e-b9e2-41d6-ae59-49540d50d9f4" title="Money Unify Airtel provider" alt="Money Unify Airtel provider">
-  </td>
-  <tr>
- </table>
 
 
 ## Let's simplify online payments for everyone! ... Feel Free to Contribute 🤓
->
+
+Unlock the power of seamless financial transactions in Africa with MoneyUnify. Our innovative platform empowers developers and businesses to effortlessly collect payments or send money to mobile networks using USSD. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs, as MoneyUnify streamlines the process into a matter of minutes. Save valuable time and resources while revolutionizing your payment solutions with MoneyUnify.
+
  - Africa
  - The World
 
-## Currently in Development
+<!-- ## Currently in Development
  - *MasterCard, VISA, ECOBANK QR CODE payments*
     ### Status
-    - TBA
+    - TBA -->
 
 ## Available Providers
- - ### Sparco
+ - ### Sparco - Zambia
     > 3.5% transaction fees
 
     > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
@@ -67,13 +59,15 @@
       <td class="text-center">Coming Soon ⏰ </td>
       </tr>
       </tbody></table>
- - ### Airtel  
-    > 2% transaction fees
+ - ### Airtel -  Available in over 15 African countries
+    > 2% - 2.5% transaction fees
     - [x] Collect mobile Money payments from *Airtel*  networks
     - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks
     - #### SETUP
-        - Setup instructions to be added soon. However, you can begin by creating your account on the Official [Airtel Developer portal](https://developers.airtel.africa/home)
-        - [x] For now, follow the example Instructions [Here](./Examples/Airtel/collections.php);
+        - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using Airtel Mobile Money
+        - [x] Begin by creating your developer account on the Official [Airtel Developer portal](https://developers.airtel.africa/home). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
+        - [x] [See Documentation](./Examples/Airtel/ReadMe.md) and snippets and integrate in minutes! />
+
      - #### Supported Countries on the Airtel mobile Money USSD provider
         <table><thead>
         <tr>

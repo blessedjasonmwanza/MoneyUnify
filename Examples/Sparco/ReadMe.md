@@ -2,7 +2,7 @@
 
 ## How to Collect and Send Money Using MoneyUnify with a Sparco Merchant account
 
-  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements **in Zambia**
+  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements **in Zambia** with the flexibility of settling funds to your bank or mobile money account.
 
  
  ## SETUP
@@ -12,9 +12,6 @@
 
  - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above obtained keys to create your  muid (MoneyUnify ID)
 
- <!-- - See examples in [Collect_money.php](collect_money.php) and pick from your favorite stack -->
-
- <!-- - You can also utilize the [Disburse / WithDraw](disburse_withdraw.php) sample file to learn how you can transfer money from your Virtual account after collection, to any mobile number. *Kindly note* After collection of payments from online clients, You'd have to wait for some 3 days or so in order to have your funds ready for disbursement. Contact the [Sparco Team](https://www.sparcopay.com/) for more information on this -->
 <hr>
 
 ## Collecting online Mobile Payments [example]
@@ -60,9 +57,6 @@
     </tr>
   </tbody>
 </table>
-
-
-
 
 
 <hr />
@@ -134,15 +128,14 @@ API works the same as collections above include required parameters. What change
 
 <br />
 
-# This project was built with
+# This project was built/tested with
 
 - PHP 8
 
-
-
 # Author
 
-👤 **Blessed Jason Mwanza**
+👤 **Blessed Jason Mwanza** - [Buy me A Coffee](https://www.buymeacoffee.com/mwanzabj) 
+
 - Portfolio : [http://blessedjasonmwanza.me](http://blessedjasonmwanza.me)
 
 - LinkedIn: [Connect with me on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
@@ -162,3 +155,4 @@ Feel free to check the [issues page](https://github.com/blessedjasonmwanza/Money
 # Show your support
 
 Give a ⭐️ if you like this project!
+ 
