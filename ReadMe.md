@@ -6,7 +6,7 @@
 
 ## Let's simplify online payments for everyone! ... Feel Free to Contribute 🤓
 
-Unlock the power of seamless financial transactions in Africa with MoneyUnify. Our innovative platform empowers developers and businesses to effortlessly collect payments or send money to mobile networks using USSD. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs, as MoneyUnify streamlines the process into a matter of minutes. Save valuable time and resources while revolutionizing your payment solutions with MoneyUnify.
+Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. Our innovative platform **empowers developers and businesses** to **effortlessly collect payments or send money** to mobile networks **using USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs, as **MoneyUnify streamlines the process** into a matter of minutes. Save valuable time and resources while **revolutionizing your payment solutions** with MoneyUnify.
 
  - Africa
  - The World
