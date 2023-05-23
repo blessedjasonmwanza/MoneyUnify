@@ -61,12 +61,11 @@ Unlock the power of seamless financial transactions in Africa with MoneyUnify. O
       </tbody></table>
  - ### Airtel -  Available in over 15 African countries
     > 2% - 2.5% transaction fees
-    - [x] Collect mobile Money payments from *Airtel*  networks
-    - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks
+    - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using **Airtel Mobile Money*
+    - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks (coming soon)
     - #### SETUP
-        - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using Airtel Mobile Money
         - [x] Begin by creating your developer account on the Official [Airtel Developer portal](https://developers.airtel.africa/home). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
-        - [x] [See Documentation](./Examples/Airtel/ReadMe.md) and snippets and integrate in minutes! />
+        - [x] [See Documentation](./Examples/Airtel/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
 
      - #### Supported Countries on the Airtel mobile Money USSD provider
         <table><thead>
