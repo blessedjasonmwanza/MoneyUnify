@@ -136,7 +136,7 @@ API works the same as collections above include required parameters. What change
 
 👤 **Blessed Jason Mwanza** - [Buy me A Coffee](https://www.buymeacoffee.com/mwanzabj) 
 
-- Portfolio : [http://blessedjasonmwanza.me](http://blessedjasonmwanza.me)
+- Portfolio : [https://blessedjasonmwanza.tech](https://blessedjasonmwanza.tech)
 
 - LinkedIn: [Connect with me on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
 
