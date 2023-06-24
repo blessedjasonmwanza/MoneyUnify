@@ -17,7 +17,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 
 
-## How do use this plugin
+## How to use this plugin
 
 Markdown documentation example for setting up and using MoneyUnify with WooCommerce:
 
