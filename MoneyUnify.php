@@ -110,7 +110,7 @@ function moneyunify_shortcode($atts) {
     <input type="text" name="last_name" placeholder="Last Name" required />
     <input type="email" name="email" placeholder="Email" required />
     <input type="tel" name="phone_number" placeholder="Phone Number" required />
-    <input type="text" name="transaction_details" placeholder="Transaction Details" required />
+    <input type="text" name="transaction_details" value="<?php moneyunify_get_product_description_from_url();?>" placeholder="Transaction Details" hidden required />
     <input type="number" name="amount" placeholder="Amount" required />
     <button type="submit">Submit</button>
   </form>
@@ -275,3 +275,8 @@ function moneyunify_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'moneyunify_enqueue_scripts');
 
 
+// Get product description from URL
+function moneyunify_get_product_description_from_url() {
+  $page_title = get_the_title();
+  return $page_title;
+}
