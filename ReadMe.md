@@ -1,6 +1,10 @@
 # [MoneyUnify](https://moneyunify.com)
 
-> Mobile Money Payments integration simplified
+
+WordPress Plugin
+
+> MoneyUnify is an easy-to-use USSD mobile money payments API that simplifies payment processes.
+
 
 
 
@@ -11,168 +15,77 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
  - Africa
  - The World
 
-<!-- ## Currently in Development
- - *MasterCard, VISA, ECOBANK QR CODE payments*
-    ### Status
-    - TBA -->
 
-## Available Providers
- - ### Sparco - Zambia
-    > 3.5% transaction fees
 
-    > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
+## How do use this plugin
 
-    - [x] Collect mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  networks
-    - [x] Send money from your Sparco merchant Account to *MTN* & *ZAMTEL* Mobile Networks
-    - #### SETUP
-        - [x] It's easy! Just follow the Setup Instructions [Here](./Examples/Sparco/ReadMe.md) - Comes with some examples 😃 />
-    - #### Supported Countries on the Sparco Provider
-      <table><thead>
-      <tr>
-      <th>Country</th>
-      <th class="width-col">Country Code</th>
-      <th>Currency</th>
-      <th class="width-th-col">Currency Code</th>
-       <th class="width-th-col">Status</th>
-      </tr>
-      </thead><tbody>
+Markdown documentation example for setting up and using MoneyUnify with WooCommerce:
 
-      <tr>
-      <td>ZAMBIA</td>
-      <td class="text-center">ZM</td>
-      <td>Zambian kwacha</td>
-      <td class="text-center">ZMW</td>
-      <td class="text-center">Active ✔️ </td>
-      </tr>
-      <tr>
-      <td>TANZANIA</td>
-      <td class="text-center">TZ</td>
-      <td>Tanzanian shilling</td>
-      <td class="text-center">TZS</td>
-      <td class="text-center">Coming Soon ⏰ </td>
-      </tr>
-      <tr>
-      <td>KENYA</td>
-      <td class="text-center">KE</td>
-      <td>Kenyan shilling</td>
-      <td class="text-center">KES</td>
-      <td class="text-center">Coming Soon ⏰ </td>
-      </tr>
-      </tbody></table>
- - ### Airtel -  Available in over 15 African countries 😍
-    > 2% - 2.5% transaction fees
-    - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using **Airtel Mobile Money*
-    - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks (coming soon)
-    - #### SETUP
-        - [x] Begin by creating your developer account on the Official [Airtel Developer portal](https://developers.airtel.africa/home). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
-        - [x] [See Documentation](./Examples/Airtel/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
 
-     - #### Supported Countries on the Airtel mobile Money USSD provider
-        <table><thead>
-        <tr>
-        <th>Country</th>
-        <th class="width-col">Country Code</th>
-        <th>Currency</th>
-        <th class="width-th-col">Currency Code</th>
-        </tr>
-        </thead><tbody>
-        <tr>
-        <td>UGANDA</td>
-        <td class="text-center">UG</td>
-        <td>Ugandan shilling</td>
-        <td class="text-center">UGX</td>
-        </tr>
-        <tr>
-        <td>NIGERIA</td>
-        <td class="text-center">NG</td>
-        <td>Nigerian naira</td>
-        <td class="text-center">NGN</td>
-        </tr>
-        <tr>
-        <td>TANZANIA</td>
-        <td class="text-center">TZ</td>
-        <td>Tanzanian shilling</td>
-        <td class="text-center">TZS</td>
-        </tr>
-        <tr>
-        <td>KENYA</td>
-        <td class="text-center">KE</td>
-        <td>Kenyan shilling</td>
-        <td class="text-center">KES</td>
-        </tr>
-        <tr>
-        <td>RWANDA</td>
-        <td class="text-center">RW</td>
-        <td>Rwandan franc</td>
-        <td class="text-center">RWF</td>
-        </tr>
-        <tr>
-        <td>ZAMBIA</td>
-        <td class="text-center">ZM</td>
-        <td>Zambian kwacha</td>
-        <td class="text-center">ZMW</td>
-        </tr>
-        <tr>
-        <td>GABON</td>
-        <td class="text-center">GA</td>
-        <td>CFA franc BEAC</td>
-        <td class="text-center">CFA</td>
-        </tr>
-        <tr>
-        <td>NIGER</td>
-        <td class="text-center">NE</td>
-        <td>CFA franc BCEAO</td>
-        <td class="text-center">XOF</td>
-        </tr>
-        <tr>
-        <td>CONGO-BRAZZAVILLE</td>
-        <td class="text-center">CG</td>
-        <td>CFA franc BCEA</td>
-        <td class="text-center">XAF</td>
-        </tr>
-        <tr>
-        <td>DR CONGO</td>
-        <td class="text-center">CD</td>
-        <td>Congolese franc</td>
-        <td class="text-center">CDF</td>
-        </tr>
-        <tr>
-        <td>DR CONGO</td>
-        <td class="text-center">CD</td>
-        <td>United States dollar</td>
-        <td class="text-center">USD</td>
-        </tr>
-        <tr>
-        <td>CHAD</td>
-        <td class="text-center">TD</td>
-        <td>CFA franc BEAC</td>
-        <td class="text-center">XAF</td>
-        </tr>
-        <tr>
-        <td>SEYCHELLES</td>
-        <td class="text-center">SC</td>
-        <td>Seychelles rupee</td>
-        <td class="text-center">SCR</td>
-        </tr>
-        <tr>
-        <td>MADAGASCAR</td>
-        <td class="text-center">MG</td>
-        <td>Malagasy ariary</td>
-        <td class="text-center">MGA</td>
-        </tr>
-        <tr>
-        <td>MALAWI</td>
-        <td class="text-center">MW</td>
-        <td>Malawian kwacha</td>
-        <td class="text-center">MWK</td>
-        </tr>
-        </tbody></table>
+## Table of Contents
 
-<hr />
+- [Installation](#installation)
+- [Plugin Activation](#plugin-activation)
+- [MoneyUnify Settings](#moneyunify-settings)
+- [Shortcodes](#shortcodes)
+- [Handling Payments](#handling-payments)
 
-# This project was built/tested with
+## Installation
 
-- PHP 8
+To install the MoneyUnify plugin, follow these steps:
+
+1. Download the plugin ZIP file from the [here](https://github.com/blessedjasonmwanza/MoneyUnify/tree/wp_plugin/MoneyUnify.zip).
+2. Log in to your WordPress dashboard.
+3. Navigate to **Plugins > Add New**.
+4. Click on the **Upload Plugin** button.
+5. Choose the downloaded ZIP file and click **Install Now**.
+6. After installation, click **Activate** to activate the MoneyUnify plugin.
+
+## Plugin Activation
+
+Upon activation, the MoneyUnify plugin will create a database table to store order data. This table is necessary for processing payments. You don't need to perform any additional steps for this setup. The table will be automatically created.
+
+## MoneyUnify Settings
+
+To configure the MoneyUnify plugin settings, follow these steps:
+
+1. Go to your WordPress dashboard.
+2. Navigate to **MoneyUnify > MoneyUnify Settings**.
+3. Fill in the following details:
+   - **MUI ID**: Enter your MoneyUnify MUI ID.
+   - **Payment Aggregators**: Enter the list of payment aggregators you want to use.
+   - **Use as Default Checkout**: Check this box to enable MoneyUnify as the default checkout option.
+4. Click **Save Changes** to save the settings.
+
+## Shortcodes
+
+The MoneyUnify plugin provides a shortcode that you can use to generate a payment form on any page or post. Place the following shortcode in your content editor:
+
+```
+[moneyunify]
+```
+
+The shortcode will generate a payment form with fields for user details, including first name, last name, email, phone number, transaction details, and amount. Users can fill in these details and submit the form to initiate a payment.
+
+## Handling Payments
+
+When a user submits the payment form generated by the MoneyUnify shortcode, the following steps are performed:
+
+1. The user's input data is validated and sanitized.
+2. The order data is saved in the database.
+3. A MoneyUnify API request is sent with the order details.
+4. The API response is processed.
+   - If the API request is successful, the order status is updated, and the user is redirected to a success page.
+   - If the API request fails, an error message is displayed, and appropriate actions can be taken.
+   
+By default, the MoneyUnify plugin integrates with WooCommerce. When a successful payment is made, the order status in WooCommerce will be updated accordingly.
+
+Note: Place the `[moneyunify]` shortcode on any page or post where you want to display the payment form. Users will be able to enter their payment details and complete the transaction.
+
+That's it! You have successfully set up and configured the MoneyUnify plugin with WooCommerce. Users can now make payments using the MoneyUnify payment form generated by the shortcode.
+
+Feel free to reach out if you have any further questions or need assistance!
+
 
 # Author
 
