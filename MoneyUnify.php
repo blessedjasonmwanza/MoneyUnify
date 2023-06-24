@@ -4,6 +4,8 @@
  * Plugin URI: https://moneyunify.com
  * Description: MoneyUnify is an easy-to-use USSD mobile money payments API that simplifies payment processes.
  * Version: 1.0.0
+ * Requires at least: 4.7
+ * Requires PHP: 7.0
  * Author: Blessed Jason Mwanza
  * Author URI: https:blessedjasonmwanza.tech
  * Update URI: https://github.com/blessedjasonmwanza/MoneyUnify/tree/wp_plugin
@@ -49,7 +51,7 @@ function moneyunify_add_settings_menu() {
     'manage_options',
     'moneyunify-settings',
     'moneyunify_render_settings_page',
-    'dashicons-admin-generic',
+    'dashicons-money-alt',
     80
   );
 }
