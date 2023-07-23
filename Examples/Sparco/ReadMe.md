@@ -26,13 +26,14 @@
 
 $curl = curl_init();
 
+//Setup transaction details
 $data = [
     'muid' => 'YOUR_MONEY_UNIFY_ID_HERE', //get it from your money unify dashboard https://dashboard.moneyunify.com/
     'first_name' => 'Customer_first_name',
     'last_name' => 'Customer_last_name',
     'email' => 'Customer_email',
-    'phone_number' => 'customer_phone_number',
-    'transaction_details' => 'Description of transaction / product being purchased e.g Dell Laptop 3400',
+    'phone_number' => 'customer_phone_number', // Customer mobile money phone number where funds are to be deducted. e.g 260971943638 
+    'transaction_details' => 'Dell Laptop 3400', //Description of transaction / product being purchased
     'amount' => '2500' // valid number amount e.g 2.45 or 2345 or 23213.04. 2500 is just an example
 ];
 
@@ -51,6 +52,7 @@ curl_setopt_array($curl, [
     ],
 ]);
 
+// Trigger payment
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
