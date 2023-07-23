@@ -19,6 +19,53 @@
 
 - **API Collection URL** ***https://api.moneyunify.com/sparco/request_payment*** - *POST*
 
+### PHP Curl Example - Request payment from customer
+```PHP
+
+<?php
+
+$curl = curl_init();
+
+$data = [
+    'muid' => 'YOUR_MONEY_UNIFY_ID_HERE', //get it from your money unify dashboard https://dashboard.moneyunify.com/
+    'first_name' => 'Customer_first_name',
+    'last_name' => 'Customer_last_name',
+    'email' => 'Customer_email',
+    'phone_number' => 'customer_phone_number',
+    'transaction_details' => 'Description of transaction / product being purchased e.g Dell Laptop 3400',
+    'amount' => '2500' // valid number amount e.g 2.45 or 2345 or 23213.04. 2500 is just an example
+];
+
+curl_setopt_array($curl, [
+    CURLOPT_URL => "https://api.moneyunify.com/sparco/request_payment",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "POST",
+    CURLOPT_POSTFIELDS => $data,
+    CURLOPT_HTTPHEADER => [
+        "Accept: */*",
+        "Content-Type: application/x-www-form-urlencoded"
+    ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+    echo "cURL Error #:" . $err;
+} else {
+    echo $response;
+}
+
+// see API responses below image examples for your eased debugging
+
+```
+
 <table>
   <thead>
     <tr>
