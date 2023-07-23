@@ -5,7 +5,7 @@
   > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements **in Zambia** with the flexibility of settling funds to your bank or mobile money account.
 
  
- ## SETUP
+## SETUP
 
 -  Login to your Sparco your account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab and   order to obtain both your public and private/secret keys
 
@@ -67,6 +67,10 @@ if ($err) {
 // see API responses below image examples for your eased debugging
 
 ```
+
+**You love learning using videos?** 
+ > We have API documentation videos [here](https://www.youtube.com/watch?v=FSiqu8u0SjE&list=PLfHq8ygfMtd7pvjYNQUuZAaxLAxg6hSN8&pp=gAQBiAQB)
+
 
 <table>
   <thead>

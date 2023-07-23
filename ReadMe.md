@@ -1,22 +1,18 @@
 # [MoneyUnify](https://moneyunify.com)
 
-> Mobile Money Payments integration simplified
+> Mobile Money Payments integration API simplified and unified for all payments gateways
 
 
 
 ## Let's simplify online payments for everyone! ... Feel Free to Contribute 🤓
 
-Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. Our innovative platform **empowers developers and businesses** to **effortlessly collect payments or send money** to mobile networks **using USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs, as **MoneyUnify streamlines the process** into a matter of minutes. Save valuable time and resources while **revolutionizing your payment solutions** with MoneyUnify.
+Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. MoneyUnify **empowers and enables developers and businesses** to **effortlessly collect payments or send money** to mobile networks by utilizing the power **USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs. **MoneyUnify streamlines the process** into a matter of minutes, allowing you to save valuable time and resources while **revolutionizing your online payment processes**.
 
  - Africa
  - The World
 
-<!-- ## Currently in Development
- - *MasterCard, VISA, ECOBANK QR CODE payments*
-    ### Status
-    - TBA -->
 
-## Available Providers
+## Available Providers and Endpoints
  - ### Sparco - Zambia
     > 3.5% transaction fees
 
@@ -176,15 +172,15 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 # Author
 
-👤 **Blessed Jason Mwanza** - [Buy me A Coffee](https://www.buymeacoffee.com/mwanzabj) 
+👤 **Blessed Jason Mwanza** - [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj) 
 
 - Portfolio : [https://blessedjasonmwanza.tech](https://blessedjasonmwanza.tech)
 
-- LinkedIn: [Connect with me on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
+- LinkedIn: [Connect with Blessed on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
 
 - Github : [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
 
-- Twitter : [Follow me @mwanzabj](https://twitter.com/mwanzabj)
+- Twitter : [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
 
 - Youtube : [Youtube](https://www.youtube.com/@blessedjasonmwanza)
 
