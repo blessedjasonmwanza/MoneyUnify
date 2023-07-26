@@ -7,10 +7,10 @@
  
 ## SETUP
 
--  Login to your Sparco account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab and   order to obtain both your public and private/secret keys
+-  Login to your Sparco account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab in order to obtain both your public and private/secret keys
 
 
- - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above obtained keys to create your  muid (MoneyUnify ID)
+ - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above-obtained keys to create your  muid (MoneyUnify ID)
 
 <hr>
 
