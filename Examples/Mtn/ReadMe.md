@@ -1,6 +1,6 @@
 # MoneyUnify
 
-## How to Collect Payments Using MoneyUnify using MTN MoMo Merchant account
+## How to Collect Payments Using MoneyUnify with MTN MoMo Merchant account
 
 How to Collect and Send Money Using MoneyUnify with - Airtel Merchant account
   > *MTN* to *MTN*, Instant mobile Money collections and disbursements **in over 12 African countries** with the flexibility of settling funds to your bank or mobile money account.
