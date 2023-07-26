@@ -55,6 +55,31 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
       <td class="text-center">Coming Soon ⏰ </td>
       </tr>
       </tbody></table>
+
+
+ - ### MTN MoMo API -  Available in over 12 African countries 😍
+    > 2% transaction fees
+    - [x] **Make collections** - You can Accept payments from **over 12 countries in Africa** using **MTN MoMo Mobile Money*
+    - [ ] Send money from your MTN MoMo merchant Account to *MTN MoMo* Mobile Networks (coming soon)
+    - #### SETUP
+        - [x] Begin by creating your developer account on the Official [MTN Developer portal](https://momodeveloper.mtn.com/developer) and [subscribe to a collection product](https://momodeveloper.mtn.com/api-documentation/getting-started/). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
+        - [x] [See Documentation](./Examples/Mtn/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
+
+     - #### Supported Countries on the MTN Momo mobile Money USSD provider
+         | Country | Country Code | Currency | Currency Code |
+         |---|---|---|---|
+         | Cameroon | CM | FCFA | XAF |
+         | Ghana | GH | GHS | GHS |
+         | Ivory Coast | CI | XOF | XOF |
+         | Liberia | LR | LRD | LRD |
+         | Malawi | MW | MWK | MWK |
+         | Mozambique | MZ | MZN | MZN |
+         | Nigeria | NG | NGN | NGN |
+         | Rwanda | RW | RWF | RWF |
+         | Zambia | ZM | ZMW | ZMW |
+
+
+
  - ### Airtel -  Available in over 15 African countries 😍
     > 2% - 2.5% transaction fees
     - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using **Airtel Mobile Money*
@@ -163,7 +188,6 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
         <td class="text-center">MWK</td>
         </tr>
         </tbody></table>
-
 <hr />
 
 # This project was built/tested with

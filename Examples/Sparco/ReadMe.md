@@ -7,7 +7,7 @@
  
 ## SETUP
 
--  Login to your Sparco your account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab and   order to obtain both your public and private/secret keys
+-  Login to your Sparco account [here](https://gateway.sparco.io/) then, go to ```Settings``` tab and   order to obtain both your public and private/secret keys
 
 
  - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above obtained keys to create your  muid (MoneyUnify ID)
@@ -15,7 +15,7 @@
 <hr>
 
 ## Collecting online Mobile Payments [example]
-> Use your favourite stack to collect money via USSD from customers in Zambia
+> Use your favorite stack to collect money via USSD from customers in Zambia
 
 - **API Collection URL** ***https://api.moneyunify.com/sparco/request_payment*** - *POST*
 
