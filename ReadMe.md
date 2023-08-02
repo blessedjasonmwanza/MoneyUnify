@@ -4,7 +4,7 @@
 
 
 
-## Mobile Money Payments, Simplified - [MTN, Airtel, Zamtel] 🤓
+## Mobile Money Payments, Simplified - MTN, Airtel, Zamtel 🤓
 
 Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. MoneyUnify **empowers and enables developers and businesses** to **effortlessly collect payments or send money** to mobile networks by utilizing the power **USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs. **MoneyUnify streamlines the process** into a matter of minutes, allowing you to save valuable time and resources while **revolutionizing your online payment processes**.
 
