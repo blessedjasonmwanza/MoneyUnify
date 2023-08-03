@@ -56,6 +56,8 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
       </tr>
       </tbody></table>
 
+> ℹ️ ⚠️ When going live, you must **submit your KYC to Sparco via their developer portal**. You can contact their teams to help speed up the approval process.
+
 
  - ### MTN MoMo API -  Available in over 12 African countries 😍
     > 2% transaction fees
@@ -79,6 +81,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
          | Zambia | ZM | ZMW | ZMW |
 
 
+> ℹ️ ⚠️ When going live, you must **submit your KYC to MTN via their developer portal**. You can contact their teams to help speed up the approval process.
 
  - ### Airtel -  Available in over 15 African countries 😍
     > 2% - 2.5% transaction fees
@@ -188,6 +191,8 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
         <td class="text-center">MWK</td>
         </tr>
         </tbody></table>
+
+> ℹ️ ⚠️ When going live, you must **submit your KYC to Airtel via their developer portal**. You can contact their teams to help speed up the approval process.
 <hr />
 
 # This project was built/tested with
