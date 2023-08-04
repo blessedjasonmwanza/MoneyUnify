@@ -118,23 +118,51 @@ if ($err) {
 
 ## SUCCESS Message Examples
 
-> If transaction request is successful, you will get a response like this one.
+> If the transaction request is successful, you will get responses like these.
 ```json
 {
-    "isError": false,
-    "message": "Waiting for wallet holder to authorize debit transaction.",
-    "console":{
-    "code": 201,
-        "reference": "eyJ0aWQiOjM1MTM1NSwiZW52IjoicCJ9",
-        "status": "TXN_AUTH_PENDING",
-        "transactionReference": "09xxxxxxxx_1640602121"
-    }
+  // wating for user to enter pin
+  "message": "Transaction pending authorization.",
+  "data": {
+    "amount": 1.93,
+    "currency": "ZMW",
+    "customerFirstName": "john",
+    "customerLastName": "doe",
+    "customerMobileWallet": "0971943638",
+    "feeAmount": 0.07,
+    "feePercentage": 3.5,
+    "merchantReference": "0970xx_1191149585",
+    "reference": "eyJ0aWQqweqdwqdrwerwwe2NzgsImVudiI6InAifQ",
+    "responseCode": 200,
+    "status": "TXN_AUTH_PENDING",
+    "transactionAmount": 2
+  },
+  "isError": false
+}
+// user approved transaction
+{
+  "message": "Transaction pending authorization.",
+  "data": {
+    "amount": 1.93,
+    "currency": "ZMW",
+    "customerFirstName": "john",
+    "customerLastName": "doe",
+    "customerMobileWallet": "0971943638",
+    "feeAmount": 0.07,
+    "feePercentage": 3.5,
+    "merchantReference": "0970xx_1191149585",
+    "reference": "eyJ0aWQqweqdwqdrwerwwe2NzgsImVudiI6InAifQ",
+    "responseCode": 200,
+    "status": "TXN_AUTH_PENDING",
+    "transactionAmount": 2
+  },
+  "isError": false
 }
 ```
 
 ## Error Message examples
 
-If transaction request has failed, you will get a response like this one.
+If a transaction request has failed, you will get responses like these.
 
 ```json
 {
@@ -144,6 +172,22 @@ If transaction request has failed, you will get a response like this one.
     {
         "responseCode": 403
     }
+}
+
+//or
+
+{
+  "message": "Invalid phone number",
+  "console": {
+    "muid": "YOUR_MONEY_UNIFY ID",
+    "phone_number": "097943638",
+    "transaction_details": "Test order",
+    "amount": "2",
+    "email": "mwanzabj@gmail.com",
+    "first_name": "BLessed jason",
+    "last_name": "Mwanza"
+  },
+  "isError": true
 }
 ```
 
