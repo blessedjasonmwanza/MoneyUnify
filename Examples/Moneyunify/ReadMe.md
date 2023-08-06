@@ -193,7 +193,7 @@ if ($err) {
 
 ## Response Status Description
 
-The following response statuses are returned in webhook and transaction query payloads:
+The following response statuses are returned when requesting payment or verifying transactions
 
 | Status                 | Description                                        |
 |------------------------|----------------------------------------------------|
