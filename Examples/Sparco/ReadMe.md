@@ -1,5 +1,8 @@
 # [MoneyUnify](https://github.com/blessedjasonmwanza/MoneyUnify)
 
+
+Before you proceed, we recommend you use [Moneyunify endpoint](../Moneyunify/ReadMe.md) instead. Unless, you have an approved account with Sparco gateway.
+
 ## How to Collect and Send Money Using MoneyUnify with a Sparco Merchant account
 
   > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements **in Zambia** with the flexibility of settling funds to your bank or mobile money account.
