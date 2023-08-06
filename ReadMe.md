@@ -4,7 +4,7 @@
 
 
 
-## Let's simplify online payments for everyone! ... Feel Free to Contribute 🤓
+## Mobile Money Payments, Simplified - MTN, Airtel, Zamtel 🤓
 
 Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. MoneyUnify **empowers and enables developers and businesses** to **effortlessly collect payments or send money** to mobile networks by utilizing the power **USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs. **MoneyUnify streamlines the process** into a matter of minutes, allowing you to save valuable time and resources while **revolutionizing your online payment processes**.
 
@@ -32,6 +32,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 
 
+
  - ### MTN MoMo API -  Available in over 12 African countries 😍
     > 2% transaction fees
     - [x] **Make collections** - You can Accept payments from **over 12 countries in Africa** using **MTN MoMo Mobile Money*
@@ -55,6 +56,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 
 
+> ℹ️ ⚠️ When going live, you must **submit your KYC to MTN via their developer portal**. You can contact their teams to help speed up the approval process.
 
  - ### Airtel -  Available in over 15 African countries 😍
     > 2% - 2.5% transaction fees
@@ -84,6 +86,10 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
          | MALAWI             | MW           | Malawian kwacha    | MWK           |
 
 <hr />
+> ℹ️ ⚠️ When going live, you must **submit your KYC to Airtel via their developer portal**. You can contact their teams to help speed up the approval process.
+<hr />
+
+
 
 # This project was built/tested with
 
