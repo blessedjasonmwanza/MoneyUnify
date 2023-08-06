@@ -40,6 +40,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
     - #### SETUP
         - [x] Begin by creating your developer account on the Official [MTN Developer portal](https://momodeveloper.mtn.com/developer) and [subscribe to a collection product](https://momodeveloper.mtn.com/api-documentation/getting-started/). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
         - [x] [See Documentation](./Examples/Mtn/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
+        - [ ] ℹ️ ⚠️ before going going live, you must **submit your KYC to MTN via their developer portal**. You can contact their teams to help speed up the approval process.
 
      - #### Supported Countries on the MTN Momo mobile Money USSD provider
          | Country      | Country Code | Currency            | Currency Code |
@@ -56,15 +57,14 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 
 
-> ℹ️ ⚠️ When going live, you must **submit your KYC to MTN via their developer portal**. You can contact their teams to help speed up the approval process.
-
  - ### Airtel -  Available in over 15 African countries 😍
     > 2% - 2.5% transaction fees
     - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using **Airtel Mobile Money*
     - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks (coming soon)
     - #### SETUP
-        - [x] Begin by creating your developer account on the Official [Airtel Developer portal](https://developers.airtel.africa/home). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
+        - [x] Begin by creating your developer account on the Official [Airtel Developer portal](https://developers.airtel.africa/home). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com) and **subscribe to their collections product**
         - [x] [See Documentation](./Examples/Airtel/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
+        - [ ] ℹ️ ⚠️ before going live, you must **submit your KYC to Airtel via their developer portal**. You can contact their teams to help speed up the approval process.
 
      - #### Supported Countries on the Airtel mobile Money USSD provider
          | Country            | Country Code | Currency           | Currency Code |
@@ -85,8 +85,6 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
          | MADAGASCAR         | MG           | Malagasy ariary    | MGA           |
          | MALAWI             | MW           | Malawian kwacha    | MWK           |
 
-<hr />
-> ℹ️ ⚠️ When going live, you must **submit your KYC to Airtel via their developer portal**. You can contact their teams to help speed up the approval process.
 <hr />
 
 
