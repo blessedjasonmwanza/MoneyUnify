@@ -6,7 +6,7 @@
 
 ## Mobile Money Payments, Simplified - MTN, Airtel, Zamtel 🤓
 
-Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. MoneyUnify **empowers and enables developers and businesses** to **effortlessly collect payments or send money** to mobile networks by utilizing the power **USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs. **MoneyUnify streamlines the process** into a matter of minutes, allowing you to save valuable time and resources while **revolutionizing your online payment processes**.
+Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. MoneyUnify **empowers and enables developers and businesses** to **effortlessly collect payments or send money** to mobile networks by utilizing the power of **USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs. **MoneyUnify streamlines the process** into minutes, allowing you to save valuable time and resources while **revolutionizing your online payment processes**.
 
  - Africa
  - The World
@@ -14,6 +14,8 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 ## Available Providers and Endpoints
  - ### MoneyUnify - Payments in Zambia *(Recommended for businesses/individuals in Zambia)*
+    ![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
+
     > 3.5% /transaction 
 
     > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
