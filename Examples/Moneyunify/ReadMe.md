@@ -92,7 +92,6 @@ if ($err) {
     "responseCode": 200,
     "status": "TXN_AUTH_PENDING",
     "transactionAmount": 1,
-    "transaction_token": "eyJ0eXAiOkJKc1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJLZXkiOiI0N2MwY2NhNjNkNTM0MmQ0YmI0MDNhYWEwNjBmNjEyOCJ9.NcnLBTk9A1A6KRVEWtJpjBa_gsYHlyxXvgijQTioqr8"
   },
   "isError": false
 }
@@ -132,7 +131,7 @@ $curl = curl_init();
 //Setup verification details
 $data = [
   'muid' => 'YOUR_MONEY_UNIFY_ID_HERE', //get it from your MoneyUnify dashboard https://dashboard.moneyunify.com/
-  'reference' => 'ayC0aWQiOoI5ODMxNjEsImVudiI6InAifQ',
+  'reference' => 'ayC0aWQiOoI5ODMxNjEsImVudiI6InAifQ', //provide a transaction reference this is just an example reference
 ];
 
 curl_setopt_array($curl, [
@@ -171,21 +170,21 @@ if ($err) {
 > Check the status of the transaction
 ```json
 {
-  "message": "Transaction pending authorization.",
+  "message": "Transaction was successful",
   "data": {
-    "amount": 1,
+    "amount": 0.97,
     "currency": "ZMW",
     "customerFirstName": "Blessed Jason",
     "customerLastName": "Mwanza",
     "customerMobileWallet": "0971943638",
-    "feeAmount": 0,
-    "feePercentage": 0,
-    "merchantReference": "0971943638_1623338549",
-    "reference": "ayC0aWQiOoI5ODfxNjEsImVudiI6InAifQ",
+    "feeAmount": 0.03,
+    "feePercentage": 3,
+    "merchantReference": "0971943638_139938267",
+    "message": "Transaction was successful",
+    "reference": "eyJ0aWciOjI3adDMxNTksImVudiI6InAifQ",
     "responseCode": 200,
-    "status": "TXN_AUTH_PENDING",
-    "transactionAmount": 1,
-    "transaction_token": "eyJ0eXAiOkJKc1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJLZXkiOiI0N2MwY2NhNjNkNTM0MmQ0YmI0MDNhYWEwNjBmNjEyOCJ9.NcnLBTk9A1A6KRVEWtJpjBa_gsYHlyxXvgijQTioqr8"
+    "status": "TXN_AUTH_SUCCESSFUL",
+    "transactionAmount": 1
   },
   "isError": false
 }
