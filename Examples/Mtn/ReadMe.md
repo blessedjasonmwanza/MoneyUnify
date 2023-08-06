@@ -1,4 +1,4 @@
-# MoneyUnify
+# [MoneyUnify](https://github.com/blessedjasonmwanza/MoneyUnify)
 
 ## How to Collect Payments Using MoneyUnify with MTN MoMo Merchant account
 

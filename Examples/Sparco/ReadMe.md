@@ -1,4 +1,4 @@
-# MoneyUnify
+# [MoneyUnify](https://github.com/blessedjasonmwanza/MoneyUnify)
 
 ## How to Collect and Send Money Using MoneyUnify with a Sparco Merchant account
 

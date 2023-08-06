@@ -1,4 +1,4 @@
-# MoneyUnify
+# [MoneyUnify](https://github.com/blessedjasonmwanza/MoneyUnify)
 
 ## How to Receive payments in Zambia through Mobile Money Payments
 
