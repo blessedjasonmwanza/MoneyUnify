@@ -22,45 +22,31 @@
 
 <?php
 
+$body = array(
+    'muid' => 'YOUR_MONEY_UNIFY_ID',
+    'phone_number' => 'CUSTOMER_PHONE_NUMBER', // 10 digits customer phone number eg. 09700000
+    'transaction_details' => 'Test order', -  this is just a sample
+    'amount' => '1', // this is just a sample - amount to deduct e.g 5.50. or 2
+    'email' => 'mwanzabj@gmail.com', //customer email -  this is just a sample
+    'first_name' => 'Blessed Jason', //customer first name -  this is just a sample
+    'last_name' => 'Mwanza', //customer last name -  this is just a sample
+);
+
 $curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'https://api.moneyunify.com/moneyunify/request_payment'); //endpoint
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($body));
 
-//Setup transaction details
-$data = [
-    'muid' => 'YOUR_MONEY_UNIFY_ID_HERE', //get it from your MoneyUnify dashboard https://dashboard.moneyunify.com/
-    'first_name' => 'Customer_first_name',
-    'last_name' => 'Customer_last_name',
-    'email' => 'Customer_email',
-    'phone_number' => 'customer_phone_number', // Customer mobile money phone number where funds are to be deducted. e.g 260971943638 
-    'transaction_details' => 'Dell Laptop 3400', //Description of transaction / product being purchased
-    'amount' => '2500' // valid number amount e.g 2.45 or 2345 or 23213.04. 2500 is just an example
-];
-
-curl_setopt_array($curl, [
-    CURLOPT_URL => "https://api.moneyunify.com/moneyunify/request_payment",
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => "",
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 30,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "POST",
-    CURLOPT_POSTFIELDS => $data,
-    CURLOPT_HTTPHEADER => [
-        "Accept: */*",
-        "Content-Type: application/x-www-form-urlencoded"
-    ],
-]);
-
-// Trigger payment
 $response = curl_exec($curl);
-$err = curl_error($curl);
 
-curl_close($curl);
-
-if ($err) {
-    echo "cURL Error #:" . $err;
+if ($response === false) {
+    echo 'cURL Error: ' . curl_error($curl);
 } else {
     echo $response;
 }
+
+curl_close($curl);
 
 // see API responses below image examples for your eased debugging
 
