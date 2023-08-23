@@ -205,6 +205,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## Show Your Support
 
 If you find this project helpful, give it a ⭐️!
-```
-
-Feel free to copy and paste this markdown code into your documentation. This version is designed to be easily understandable and adaptable for developers coming from different programming languages.
