@@ -1,39 +1,40 @@
+
 # [MoneyUnify](https://github.com/blessedjasonmwanza/MoneyUnify)
 
-## How to Receive payments in Zambia through Mobile Money Payments
+## How to Receive Payments in Zambia through Mobile Money
 
-  > *AIRTEL*, *MTN*, & *ZAMTEL*  Instant mobile Money collections and disbursements **in Zambia** highly recommended for businesses operating within **Zambia**, with the flexibility of settling funds to your bank or mobile money account.
+Receive instant mobile money collections and disbursements in Zambia through AIRTEL, MTN, and ZAMTEL. This guide is recommended for businesses operating within Zambia, providing the flexibility of settling funds to your bank or mobile money account.
 
- 
-## SETUP
+## Setup
 
- - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above-obtained keys to create your  muid (MoneyUnify ID)
- - No need for KYC
+- Create an account on [MoneyUnify](https://dashboard.moneyunify.com) and use the obtained keys to create your MoneyUnify ID (muid).
+- No need for KYC.
 
-<hr>
+---
 
-## Collecting online Mobile Payments [example]
-> Use your favorite programming language to collect money via USSD from customers in Zambia
+## Collecting Online Mobile Payments [Example]
 
-- **API Collection URL** ***https://api.moneyunify.com/moneyunify/request_payment*** - *POST*
+Use your favorite programming language to collect money via USSD from customers in Zambia.
 
-### PHP Curl Example - Request payment from customer
-```PHP
+- **API Collection URL**: `https://api.moneyunify.com/moneyunify/request_payment` - **POST**
 
+### PHP Curl Example - Request Payment from Customer
+
+```php
 <?php
 
 $body = array(
     'muid' => 'YOUR_MONEY_UNIFY_ID',
-    'phone_number' => 'CUSTOMER_PHONE_NUMBER', // 10 digits customer phone number eg. 09700000
-    'transaction_details' => 'Test order', -  this is just a sample
-    'amount' => '1', // this is just a sample - amount to deduct e.g 5.50. or 2
-    'email' => 'mwanzabj@gmail.com', //customer email -  this is just a sample
-    'first_name' => 'Blessed Jason', //customer first name -  this is just a sample
-    'last_name' => 'Mwanza', //customer last name -  this is just a sample
+    'phone_number' => 'CUSTOMER_PHONE_NUMBER', // 10 digits customer phone number, e.g., 09700000
+    'transaction_details' => 'Test order',
+    'amount' => '1', // Amount to deduct, e.g., 5.50 or 2
+    'email' => 'mwanzabj@gmail.com',
+    'first_name' => 'Blessed Jason',
+    'last_name' => 'Mwanza',
 );
 
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, 'https://api.moneyunify.com/moneyunify/request_payment'); //endpoint
+curl_setopt($curl, CURLOPT_URL, 'https://api.moneyunify.com/moneyunify/request_payment');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($body));
@@ -47,21 +48,14 @@ if ($response === false) {
 }
 
 curl_close($curl);
-
-// see API responses below image examples for your eased debugging
-
 ```
 
-**You love learning using videos?** 
- > We have API documentation videos [here](https://www.youtube.com/watch?v=FSiqu8u0SjE&list=PLfHq8ygfMtd7pvjYNQUuZAaxLAxg6hSN8&pp=gAQBiAQB)
+---
 
-<hr />
+## Success Message Example
 
+If the transaction request is successful, you'll receive a response like this:
 
-
-## SUCCESS Message Examples
-
-> If transaction request is successful, you will get a response like this one.
 ```json
 {
   "message": "Transaction pending authorization.",
@@ -77,51 +71,50 @@ curl_close($curl);
     "reference": "ayC0aWQiOoI5ODfxNjEsImVudiI6InAifQ",
     "responseCode": 200,
     "status": "TXN_AUTH_PENDING",
-    "transactionAmount": 1,
+    "transactionAmount": 1
   },
   "isError": false
 }
 ```
 
-## Error Message examples
+---
 
-If transaction request has failed, you will get a response like this one.
+## Error Message Example
+
+If the transaction request fails, you'll receive a response like this:
 
 ```json
 {
     "isError": true,
     "message": "request not authorized",
-    "console":
-    {
+    "console": {
         "responseCode": 403
     }
 }
 ```
 
-<hr />
+---
 
+## Verifying Transactions [Example]
 
-## Verifying transactions [example]
-> Use your favorite programming language to verify transaction statuses
+Use your favorite programming language to verify transaction statuses.
 
+- **TRANSACTION VERIFICATION URL**: `https://api.moneyunify.com/moneyunify/verify_transaction` - use **POST** method
 
-- **API Disbursement URL** ***https://api.moneyunify.com/moneyunify/verify_transaction*** - *using POST method*
+### PHP Curl Example - Verify Transaction Status
 
-### PHP Curl Example - verify transaction status
-```PHP
-
+```php
 <?php
 
 $curl = curl_init();
 
-// Setup verification details
 $body = array(
-    'muid' => 'YOUR_MONEY_UNIFY_ID_HERE', //get it from your MoneyUnify dashboard https://dashboard.moneyunify.com/
-    'reference' => 'ayC0aWQiOoI5ODMxNjEsImVudiI6InAifQ',  //provide a transaction reference this is just an example reference
+    'muid' => 'YOUR_MONEY_UNIFY_ID_HERE',
+    'reference' => 'ayC0aWQiOoI5ODMxNjEsImVudiI6InAifQ',
 );
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://api.moneyunify.com/moneyunify/verify_transaction", //endpoint
+    CURLOPT_URL => "https://api.moneyunify.com/moneyunify/verify_transaction",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -131,7 +124,6 @@ curl_setopt_array($curl, array(
     CURLOPT_POSTFIELDS => http_build_query($body),
 ));
 
-// Trigger payment
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -142,14 +134,14 @@ if ($err) {
 } else {
     echo $response;
 }
-
-// see API responses below image examples for your eased debugging
-
 ```
 
-## Verification response example
+---
 
-> Check the status of the transaction
+## Verification Response Example
+
+Check the status of the transaction:
+
 ```json
 {
   "message": "Transaction was successful",
@@ -172,48 +164,47 @@ if ($err) {
 }
 ```
 
+---
+
 ## Response Status Description
 
-The following response statuses are returned when requesting payment or verifying transactions
+Here are the response statuses returned when requesting payment or verifying transactions:
 
-| Status                 | Description                                        |
-|------------------------|----------------------------------------------------|
-| TXN_AUTH_PENDING       | Transaction awaiting authorization.               |
-| TXN_PENDING            | Transaction still processing.                     |
-| TXN_AUTH_SUCCESSFUL    | Transaction successfully processed. Successful authorization. |
-| TXN_AUTH_UNSUCCESSFUL  | Transaction failed. Unsuccessful authorization.   |
-| TXN_SUCCESSFUL         | Transaction successfully processed.               |
-| TXN_FAILED             | Transaction failed.                               |
-| TXN_PROCESSING         | Transaction was successfully submitted for processing. |
+| Status               | Description                                           |
+|----------------------|-------------------------------------------------------|
+| TXN_AUTH_PENDING     | Transaction awaiting authorization.                  |
+| TXN_PENDING          | Transaction still processing.                        |
+| TXN_AUTH_SUCCESSFUL  | Successfully authorized transaction.                 |
+| TXN_AUTH_UNSUCCESSFUL| Transaction authorization failed.                    |
+| TXN_SUCCESSFUL       | Transaction successfully processed.                  |
+| TXN_FAILED           | Transaction failed.                                  |
+| TXN_PROCESSING       | Transaction submitted for processing.                |
 
+---
 
-<br />
-
-# This project was built/tested with
+## This Project was Built/Tested with
 
 - PHP 8
 
-# Author
+## Author
 
-👤 **Blessed Jason Mwanza** - [Donate to project](https://www.buymeacoffee.com/mwanzabj) 
+👤 **Blessed Jason Mwanza**
 
-- Portfolio : [https://blessedjasonmwanza.tech](https://blessedjasonmwanza.tech)
+- Portfolio: [https://blessedjasonmwanza.tech](https://blessedjasonmwanza.tech)
+- LinkedIn: [Connect on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
+- Github: [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
+- Twitter: [Follow @mwanzabj](https://twitter.com/mwanzabj)
+- YouTube: [YouTube Channel](https://www.youtube.com/@blessedjasonmwanza)
 
-- LinkedIn: [Connect with me on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
+---
 
-- Github : [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
+## 🤝 Contributing
 
-- Twitter : [Follow me @mwanzabj](https://twitter.com/mwanzabj)
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues).
 
-- Youtube : [Youtube](https://www.youtube.com/@blessedjasonmwanza)
+## Show Your Support
 
-# 🤝 Contributing
+If you find this project helpful, give it a ⭐️!
+```
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues).
-
-# Show your support
-
-Give a ⭐️ if you like this project!
- 
+Feel free to copy and paste this markdown code into your documentation. This version is designed to be easily understandable and adaptable for developers coming from different programming languages.
