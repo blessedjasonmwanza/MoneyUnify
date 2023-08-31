@@ -93,6 +93,80 @@ If the transaction request fails, you'll receive a response like this:
 }
 ```
 
+
+---
+
+## Settle Funds to MObile Wallet [Example]
+
+Use your favorite programming language to Settle Funds to your mobile wallet.
+
+<h4 style="color: red"> WARNINGS </h4>
+
+  - Settlements are None Reversible! keep your muid and email private!
+
+
+### PHP Curl Example - Settle funds to mobile money wallet
+
+- **TRANSACTION VERIFICATION URL**: `https://api.moneyunify.com/moneyunify/settle` - use **POST** method
+
+```php
+<?php
+
+$curl = curl_init();
+
+$body = array(
+    "muid" => "YOUR_MUID",
+    "email" => "user@site.domain", // your email associated with moneyunify
+    "first_name" => "Blessed Jason", //receiving account holder first name
+    "last_name" => "Mwanza", //receiving account holder last name
+    "transaction_details" => "Settle all money to mobile wallet", 
+    "phone_number" => "0969829983", // 10 digits MTN or ZAMTEL receiving/settlement phone number
+);
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "https://api.moneyunify.com/moneyunify/settle",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "POST",
+    CURLOPT_POSTFIELDS => http_build_query($body),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+    echo "cURL Error #:" . $err;
+} else {
+    echo $response;
+}
+```
+
+---
+
+## Settlement Response Example
+
+Check the status of the transaction:
+
+```json
+{
+  "message": "Settlement successful!",
+  "data": {
+    "reference": "eyJ0aWQiOjI5ODc3MzEsImVudiI6InAifQ",
+    "status": "TXN_SUCCESSFUL"
+  },
+  "isError": false
+}
+```
+
+
+
+
+
 ---
 
 ## Verifying Transactions [Example]
