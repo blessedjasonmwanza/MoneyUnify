@@ -16,12 +16,12 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
  - ### MoneyUnify - Payments in Zambia *(Recommended for businesses/individuals in Zambia)*
     ![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
 
-    > 3.5% /transaction 
+    > 3.5% / transaction (calculated from initial paid amount) 
 
     > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
 
     - [x] **Make Collections** -  Request mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  (All Network operators in Zambia)
-    - [ ] **Send money** - Disburse from your MoneyUnify Account to *MTN* & *ZAMTEL* Mobile Networks
+    - [X] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to *MTN* & *ZAMTEL* Mobile Networks
     - #### SETUP
         - [x] It's easy and instant! 😃 just your account on MoneyUnify  
         - [x] Check [ Documentation Here](./Examples/Moneyunify/ReadMe.md) - Comes with some examples 😃 />

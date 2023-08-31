@@ -102,7 +102,8 @@ Use your favorite programming language to Settle Funds to your mobile wallet.
 
 <h4 style="color: red"> WARNINGS </h4>
 
-  - Settlements are None Reversible! keep your muid and email private!
+  - Settlements **are None Reversible**! **keep your muid and email private!**
+  - This endpoint will move all your funds into the destination phone number use it with extra care
 
 
 ### PHP Curl Example - Settle funds to mobile money wallet
