@@ -58,19 +58,17 @@ If the transaction request is successful, you'll receive a response like this:
 
 ```json
 {
-  "message": "Transaction pending authorization.",
+  "message": "Transaction was successful",
   "data": {
     "amount": 1,
     "currency": "ZMW",
     "customerFirstName": "Blessed Jason",
     "customerLastName": "Mwanza",
     "customerMobileWallet": "0971943638",
-    "feeAmount": 0,
-    "feePercentage": 0,
-    "merchantReference": "0971943638_1623338549",
-    "reference": "ayC0aWQiOoI5ODfxNjEsImVudiI6InAifQ",
+    "merchantReference": "0971943638_1693599460",
+    "reference": "eyJ0aWQiOjI5ODg4ODQsImVudiI6InAifQ",
     "responseCode": 200,
-    "status": "TXN_AUTH_PENDING",
+    "status": "TXN_AUTH_SUCCESSFUL",
     "transactionAmount": 1
   },
   "isError": false
