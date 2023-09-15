@@ -9,6 +9,7 @@ Receive instant mobile money collections in Zambia through all 3 mobile networks
 
 - Create an account on [MoneyUnify](https://dashboard.moneyunify.com) and use the obtained keys to create your MoneyUnify ID (muid).
 - No need for KYC.
+- Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
 
 ---
 
