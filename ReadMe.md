@@ -21,7 +21,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
     > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
 
     - [x] **Make Collections** -  Request mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  (All Network operators in Zambia)
-    - [X] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to *MTN* & *ZAMTEL* Mobile Networks
+    - [X] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to *MTN* Mobile Networks
     - #### SETUP
         - [x] It's easy and instant! 😃 just your account on MoneyUnify  
         - [x] Check [ Documentation Here](./Examples/Moneyunify/ReadMe.md) - Comes with some examples 😃 />

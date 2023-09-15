@@ -3,7 +3,7 @@
 
 ## How to Receive Payments in Zambia through Mobile Money
 
-Receive instant mobile money collections and disbursements in Zambia through AIRTEL, MTN, and ZAMTEL. This guide is recommended for businesses operating within Zambia, providing the flexibility of settling funds to your bank or mobile money account.
+Receive instant mobile money collections in Zambia through all 3 mobile networks; AIRTEL, MTN, and ZAMTEL. `moneyunify` endpoint is recommended for businesses operating within Zambia, providing the flexibility of settling funds to your bank or mobile money account.
 
 ## Setup
 
@@ -15,14 +15,17 @@ Receive instant mobile money collections and disbursements in Zambia through AIR
 ## Collecting Online Mobile Payments [Example]
 
 Use your favorite programming language to collect money via USSD from customers in Zambia.
-
-- **API Collection URL**: `https://api.moneyunify.com/moneyunify/request_payment` - **POST**
+- **API Collection URL**: `https://api.moneyunify.com/moneyunify/request_payment` - use **POST** method
+  > Before any transactions fees A ZMW 1 (`amount + 1`) charge is added on every collection /request to pay request by MNO.
 
 ### PHP Curl Example - Request Payment from Customer
 
 ```php
 <?php
 
+/* body or params must be form-data and not json if you're using any other programming language
+this is an example in PHP
+*/
 $body = array(
     'muid' => 'YOUR_MONEY_UNIFY_ID',
     'phone_number' => 'CUSTOMER_PHONE_NUMBER', // 10 digits customer phone number, e.g., 09700000
@@ -56,7 +59,10 @@ curl_close($curl);
 
 If the transaction request is successful, you'll receive a response like this:
 
+
+
 ```json
+// always returns a json object 
 {
   "message": "Transaction was successful",
   "data": {
@@ -113,13 +119,16 @@ Use your favorite programming language to Settle Funds to your mobile wallet.
 
 $curl = curl_init();
 
+/* body or params must be form-data and not json if you're using any other programming language
+this is an example in PHP
+*/
 $body = array(
     "muid" => "YOUR_MUID",
     "email" => "user@site.domain", // your email associated with moneyunify
-    "first_name" => "Blessed Jason", //receiving account holder first name
+    "first_name" => "Blesson", //receiving account holder first name
     "last_name" => "Mwanza", //receiving account holder last name
     "transaction_details" => "Settle all money to mobile wallet", 
-    "phone_number" => "0969829983", // 10 digits MTN or ZAMTEL receiving/settlement phone number
+    "phone_number" => "096xxxxxxx", // 10 digits MTN receiving/settlement phone number
 );
 
 curl_setopt_array($curl, array(
@@ -254,6 +263,8 @@ Here are the response statuses returned when requesting payment or verifying tra
 | TXN_PROCESSING       | Transaction submitted for processing.                |
 
 ---
+
+> Please `NOTE` - Transactions delay to be approved  and return `Pending`. You'll need to always keep your transaction response reference keys and use the verify endpoint to verify the status before moving your customers to the next steps of purchase journey.
 
 ## This Project was Built/Tested with
 
