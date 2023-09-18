@@ -13,7 +13,7 @@ How to Collect and Send Money Using MoneyUnify with - Airtel Merchant account
 -  Go to [Profile](https://momodeveloper.mtn.com/developer) tab to order to obtain both your public/Secondary and private/Primary keys
 
 
- - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above obtained keys to create your  muid (MoneyUnify ID) - This applies if you have not yet created your MoneyUnify Account. If you already have one, just login, you will find your MUI ID om your dashboard.
+ - Create your account on [MoneyUnify](https://dashboard.moneyunify.com) and use your above obtained keys to create your  muid (MoneyUnify ID) - This applies if you have not yet created your MoneyUnify Account. If you already have one, just login, you will find your MUI ID on your dashboard.
 
 <hr>
 
