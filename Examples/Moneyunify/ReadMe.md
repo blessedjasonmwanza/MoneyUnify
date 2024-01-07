@@ -11,7 +11,7 @@ Receive instant mobile money collections in Zambia through all 3 mobile networks
 - No need for KYC.
 - Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
 
-# Visit https://documenter.getpostman.com/view/11980646/2s9YsJBXZT for a comprehensive and easy-to-use documentation.
+### Visit https://documenter.getpostman.com/view/11980646/2s9YsJBXZT for a comprehensive and easy-to-use documentation.
 
 ---
 
