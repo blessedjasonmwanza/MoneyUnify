@@ -11,13 +11,15 @@ Receive instant mobile money collections in Zambia through all 3 mobile networks
 - No need for KYC.
 - Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
 
+# Visit https://documenter.getpostman.com/view/11980646/2s9YsJBXZT for a comprehensive and easy-to-use documentation.
+
 ---
 
 ## Collecting Online Mobile Payments [Example]
 
 Use your favorite programming language to collect money via USSD from customers in Zambia.
 - **API Collection URL**: `https://api.moneyunify.com/moneyunify/request_payment` - use **POST** method
-  > Before any transactions fees A ZMW 1 (`amount + 1`) charge is added on every collection /request to pay request by MNO.
+  > Before any transaction fees A ZMW 1 (`amount + 1`) charge is added on every collection /request to pay request by MNO.
 
 ### PHP Curl Example - Request Payment from Customer
 
@@ -101,7 +103,7 @@ If the transaction request fails, you'll receive a response like this:
 
 ---
 
-## Settle Funds to MObile Wallet [Example]
+## Settle Funds to Mobile Wallet [Example]
 
 Use your favorite programming language to Settle Funds to your mobile wallet.
 
@@ -113,7 +115,7 @@ Use your favorite programming language to Settle Funds to your mobile wallet.
 
 ### PHP Curl Example - Settle funds to mobile money wallet
 
-- **TRANSACTION VERIFICATION URL**: `https://api.moneyunify.com/moneyunify/settle` - use **POST** method
+- **TRANSACTION SETTLEMENT URL**: `https://api.moneyunify.com/moneyunify/settle` - use **POST** method
 
 ```php
 <?php
@@ -265,7 +267,7 @@ Here are the response statuses returned when requesting payment or verifying tra
 
 ---
 
-> Please `NOTE` - Transactions delay to be approved  and return `Pending`. You'll need to always keep your transaction response reference keys and use the verify endpoint to verify the status before moving your customers to the next steps of purchase journey.
+> Please `NOTE` - Transactions delay to be approved  and return `Pending`. You'll need to always keep your transaction response reference keys and use the verify endpoint to verify the status before moving your customers to the next steps of the purchase journey.
 
 ## This Project was Built/Tested with
 
