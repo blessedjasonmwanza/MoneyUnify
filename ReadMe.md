@@ -25,7 +25,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
     - [x]  **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
     - #### SETUP
         - [x] It's easy and instant! 😃 Just your account on MoneyUnify  
-        - [x] Check [ Documentation Here](./Examples/Moneyunify/ReadMe.md) - Comes with some examples 😃 />
+        - [x] 📂 Check [ Documentation Here](https://documenter.getpostman.com/view/11980646/2s9YsJBXZT) - Comes with some examples 😃 />
         - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
     - #### Supported Countries on the Moneyunify endpoint
       | Country   | Country Code | Currency          | Currency Code | Status         |
