@@ -1,6 +1,6 @@
 # [MoneyUnify](https://moneyunify.com)
 
-> Mobile Money Payments integration API simplified and unified for all payments gateways
+> Mobile Money Payments integration API simplified and unified for all payment gateways
 
 
 
@@ -14,18 +14,20 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 ## Available Providers and Endpoints
  - ### MoneyUnify - Payments in Zambia *(Recommended for businesses/individuals in Zambia)*
+   > Instant settlements and repayments
+   
     ![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
 
-    > 3.5% / transaction (calculated from the initial paid amount) 
+    > ~3.5%~  *Now 2.5%* + 1 ZMW per transaction (On collections) 
 
-    > Ideal for money collections in Zambia - Coming soon to **Tazania** & **Kenya** 👀
+    > Ideal for money collections in Zambia - Coming soon to **Tanzania**, **Nigeria**, **Kenya** 👀
 
     - [x] **Make Collections** -  Request mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  (All Network operators in Zambia)
-    - [X] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to *MTN* Mobile Networks
+    - [X] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to *MTN*, *Zamtel*, *MTN* All Mobile Networks Instantly
     - [x]  **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
     - #### SETUP
-        - [x] It's easy and instant! 😃 Just your account on MoneyUnify  
-        - [x] 📂 Check [ Documentation Here](https://documenter.getpostman.com/view/11980646/2s9YsJBXZT) - Comes with some examples 😃 />
+        - [x] It's easy and instant! 😃 Just [Create your account on MoneyUnify](https://dashboard.moneyunify.com/)  to get your API key (MUID)
+        - [x] 📂 Check [ Documentation Here](https://documenter.getpostman.com/view/11980646/2sA3Bn7D7f) - Comes with some examples 😃 />
         - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
     - #### Supported Countries on the Moneyunify endpoint
       | Country   | Country Code | Currency          | Currency Code | Status         |
@@ -35,6 +37,33 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
       | KENYA     | KE           | Kenyan shilling   | KES           | Coming Soon ⏰ |
 
 
+
+     ### Charges and FEES
+   ----
+
+     #### Collections (Receiving payments)
+     
+     > 2.5% + 1 ZMW per transaction
+     
+     ##### Settlements / Transfering to mobile money 
+     
+     | Settlement Account balance | What you you'll receive | Charges/ Transaction Fees |
+     | --- | --- | --- |
+     | balance \[20 ZMW \~ 1,000 ZMW \] | balance - 12 | 12 ZMW |
+     | balance \[1,000 ZMW \~ 50,000 ZMW \] | balance - 20 | 20 ZMW |
+     | balance \[ 50,000 \~ 100,000 ZMW \] | balance - 30 | 30 ZMW |
+
+
+----
+
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 
  - ### MTN MoMo API -  Available in over 12 African countries 😍
