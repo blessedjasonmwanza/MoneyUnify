@@ -27,7 +27,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
     - [x]  **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
     - #### SETUP
         - [x] It's easy and instant! 😃 Just [Create your account on MoneyUnify](https://dashboard.moneyunify.com/)  to get your API key (MUID)
-        - [x] 📂 Check [ Documentation Here](https://www.postman.com/blue-desert-395139/workspace/moneyunify-resources/documentation/11980646-9e749821-dea3-477b-9aac-352a1254a2ec) - Comes with some examples 😃 />
+        - [x] 📂 Check [ Documentation Here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da) - Comes with some examples 😃 />
         - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
     - #### Supported Countries on the Moneyunify endpoint
       | Country   | Country Code | Currency          | Currency Code | Status         |
