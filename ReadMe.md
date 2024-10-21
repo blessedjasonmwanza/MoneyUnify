@@ -1,149 +1,216 @@
-# [MoneyUnify](https://moneyunify.com)
+# MoneyUnify Library PHP Documentation
 
-> Mobile Money Payments integration API simplified and unified for all payment gateways
+The **MoneyUnify** library provides an easy interface for integrating with the [MoneyUnify API](http://MoneyUnify.com) to process mobile money payments. This documentation will guide you through the installation process and demonstrate how to use the library effectively. support for multiple programming languages is available [here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da)
 
+- ### MoneyUnify - Payments in Zambia _(Recommended for businesses/individuals in Zambia)_
+  > Instant settlements and repayments
 
+![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
 
-## Mobile Money Payments, Simplified - MTN, Airtel, Zamtel 🤓
+> Ideal for money collections in Zambia - Coming soon to **Tanzania**, **Nigeria**, **Kenya** 👀
 
-Unlock the power of seamless financial **transactions in Africa** with MoneyUnify. MoneyUnify **empowers and enables developers and businesses** to **effortlessly collect payments or send money** to mobile networks by utilizing the power of **USSD**. Say goodbye to the daunting task of integrating multiple Mobile Network Operators' APIs. **MoneyUnify streamlines the process** into minutes, allowing you to save valuable time and resources while **revolutionizing your online payment processes**.
+- [x] **Make Collections** - Request mobile Money payments from _AIRTEL_, _MTN_, & _ZAMTEL_ (All Network operators in Zambia)
+- [x] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to _MTN_, _Zamtel_, _MTN_ All Mobile Networks Instantly
+- [x] **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
+- #### SETUP
+  - [x] It's easy and instant! 😃 Just [Create your account on MoneyUnify](https://dashboard.moneyunify.com/) to get your API key (MUID)
+  - [x] 📂 Check documentation below or [ here for more languages](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da) - Comes with some examples 😃 />
+  - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
+- #### Supported Countries on the Moneyunify endpoint
+  | Country  | Country Code | Currency           | Currency Code | Status         |
+  | -------- | ------------ | ------------------ | ------------- | -------------- |
+  | ZAMBIA   | ZM           | Zambian kwacha     | ZMW           | Active ✔️      |
+  | TANZANIA | TZ           | Tanzanian shilling | TZS           | Coming Soon ⏰ |
+  | KENYA    | KE           | Kenyan shilling    | KES           | Coming Soon ⏰ |
 
- - Africa
- - The World
+### Charges and FEES
 
+---
 
-## Available Providers and Endpoints
- - ### MoneyUnify - Payments in Zambia *(Recommended for businesses/individuals in Zambia)*
-   > Instant settlements and repayments
-   
-    ![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
+#### Collections (Receiving payments)
 
-    > ~3.5%~  *Now 2.5%* + 1 ZMW per transaction (On collections) 
+> 2.5% + 1 ZMW per transaction (reduced from the initial ~3.5%~)
 
-    > Ideal for money collections in Zambia - Coming soon to **Tanzania**, **Nigeria**, **Kenya** 👀
+##### Settlements / Transferring to mobile money
 
-    - [x] **Make Collections** -  Request mobile Money payments from *AIRTEL*, *MTN*, & *ZAMTEL*  (All Network operators in Zambia)
-    - [X] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to *MTN*, *Zamtel*, *MTN* All Mobile Networks Instantly
-    - [x]  **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
-    - #### SETUP
-        - [x] It's easy and instant! 😃 Just [Create your account on MoneyUnify](https://dashboard.moneyunify.com/)  to get your API key (MUID)
-        - [x] 📂 Check [ Documentation Here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da) - Comes with some examples 😃 />
-        - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
-    - #### Supported Countries on the Moneyunify endpoint
-      | Country   | Country Code | Currency          | Currency Code | Status         |
-      |-----------|--------------|-------------------|---------------|----------------|
-      | ZAMBIA    | ZM           | Zambian kwacha    | ZMW           | Active ✔️      |
-      | TANZANIA  | TZ           | Tanzanian shilling| TZS           | Coming Soon ⏰ |
-      | KENYA     | KE           | Kenyan shilling   | KES           | Coming Soon ⏰ |
+| Settlement Account balance           | What you you'll receive | Charges/ Transaction Fees |
+| ------------------------------------ | ----------------------- | ------------------------- |
+| balance \[20 ZMW \~ 1,000 ZMW \]     | balance - 12            | 12 ZMW                    |
+| balance \[1,000 ZMW \~ 50,000 ZMW \] | balance - 20            | 20 ZMW                    |
+| balance \[ 50,000 \~ 100,000 ZMW \]  | balance - 30            | 30 ZMW                    |
 
+## Installation
 
+Documentation Usage for languages other than PHP is {available here]()
 
-     ### Charges and FEES
-   ----
+1. **Install Composer** (if you haven’t already). Follow the [Composer installation guide](https://getcomposer.org/download/).
 
-     #### Collections (Receiving payments)
-     
-     > 2.5% + 1 ZMW per transaction
-     
-     ##### Settlements / Transfering to mobile money 
-     
-     | Settlement Account balance | What you you'll receive | Charges/ Transaction Fees |
-     | --- | --- | --- |
-     | balance \[20 ZMW \~ 1,000 ZMW \] | balance - 12 | 12 ZMW |
-     | balance \[1,000 ZMW \~ 50,000 ZMW \] | balance - 20 | 20 ZMW |
-     | balance \[ 50,000 \~ 100,000 ZMW \] | balance - 30 | 30 ZMW |
+2. **Install the MoneyUnify Library** by adding it to your `composer.json`:
 
+   ```bash
+   composer require blessedjasonmwanza/moneyunify
+   ```
 
-----
+## Usage
 
+### Basic Usage
 
-<br />
+1. **Include the Autoload File**:
 
-<br />
+   ```php
+   require 'vendor/autoload.php'; // Include Composer autoload
+   ```
 
-<br />
+2. **Create an Instance of the `MoneyUnify` Class**:
 
-<br />
+   ```php
+   use Blessedjasonmwanza\MoneyUnify\MoneyUnify;
 
+   $muid = 'your_unique_muid'; // Replace with your actual MUID  - obtain it at https:/MoneyUnify.com
+   $moneyUnify = new MoneyUnify($muid);
+   ```
 
- - ### MTN MoMo API -  Available in over 12 African countries 😍
-    > 2% transaction fees
-    - [x] **Make collections** - You can Accept payments from **over 12 countries in Africa** using **MTN MoMo Mobile Money*
-    - [ ] Send money from your MTN MoMo merchant Account to *MTN MoMo* Mobile Networks (coming soon)
-    - #### SETUP
-        - [x] Begin by creating your developer account on the Official [MTN Developer portal](https://momodeveloper.mtn.com/developer) and [subscribe to a collection product](https://momodeveloper.mtn.com/api-documentation/getting-started/). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com)
-        - [x] [See Documentation](./Examples/Mtn/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
-        - [ ] ℹ️ ⚠️ before going going live, you must **submit your KYC to MTN via their developer portal**. You can contact their teams to help speed up the approval process.
+3. **Call the `requestPayment` Method**:
 
-     - #### Supported Countries on the MTN Momo mobile Money USSD provider
-         | Country      | Country Code | Currency            | Currency Code |
-         |--------------|--------------|---------------------|---------------|
-         | Cameroon     | CM           | Central African CFA Franc | XAF       |
-         | Ghana        | GH           | Ghanaian Cedi       | GHS           |
-         | Ivory Coast  | CI           | West African CFA Franc | XOF       |
-         | Liberia      | LR           | Liberian Dollar     | LRD           |
-         | Malawi       | MW           | Malawian Kwacha     | MWK           |
-         | Mozambique   | MZ           | Mozambican Metical  | MZN           |
-         | Nigeria      | NG           | Nigerian Naira      | NGN           |
-         | Rwanda       | RW           | Rwandan Franc       | RWF           |
-         | Zambia       | ZM           | Zambian Kwacha      | ZMW           |
+   ```php
+   $payerPhoneNumber = '0xxxxxxxx'; // Replace with payer's phone number
+   $amountToPay = '10'; // Amount to be paid
 
+   $response = $moneyUnify->requestPayment($payerPhoneNumber, $amountToPay);
+   ```
 
+4. **Check the Response**:
 
- - ### Airtel -  Available in over 15 African countries 😍
-    > 2% - 2.5% transaction fees
-    - [x] **Make collections** - You can Accept payments from **over 15 countries in Africa** using **Airtel Mobile Money*
-    - [ ] Send money from your Airtel merchant Account to *Airtel* Mobile Networks (coming soon)
-    - #### SETUP
-        - [x] Begin by creating your developer account on the Official [Airtel Developer portal](https://developers.airtel.africa/home). Thereafter, configure your keys on the [MoneyUnify Dashboard](https://dashboard.moneyunify.com) and **subscribe to their collections product**
-        - [x] [See Documentation](./Examples/Airtel/ReadMe.md). Snippet examples are available to help you integrate in minutes! />
-        - [ ] ℹ️ ⚠️ before going live, you must **submit your KYC to Airtel via their developer portal**. You can contact their teams to help speed up the approval process.
+   ```php
+   if ($response->isError) {
+       echo "Error: " . $response->message . "\n";
+       echo "Console: " . ($response->console ?? 'No console message to debug') . "\n";
+   } else {
+       echo "Success: " . $response->message . "\n";
+       echo "Data: " . json_encode($response->data) . "\n";
+   }
+   ```
 
-     - #### Supported Countries on the Airtel mobile Money USSD provider
-         | Country            | Country Code | Currency           | Currency Code |
-         |--------------------|--------------|--------------------|---------------|
-         | UGANDA             | UG           | Ugandan shilling   | UGX           |
-         | NIGERIA            | NG           | Nigerian naira     | NGN           |
-         | TANZANIA           | TZ           | Tanzanian shilling | TZS           |
-         | KENYA              | KE           | Kenyan shilling    | KES           |
-         | RWANDA             | RW           | Rwandan franc      | RWF           |
-         | ZAMBIA             | ZM           | Zambian kwacha     | ZMW           |
-         | GABON              | GA           | CFA franc BEAC     | CFA           |
-         | NIGER              | NE           | CFA franc BCEAO    | XOF           |
-         | CONGO-BRAZZAVILLE  | CG           | CFA franc BCEA     | XAF           |
-         | DR CONGO           | CD           | Congolese franc    | CDF           |
-         | DR CONGO           | CD           | United States dollar | USD         |
-         | CHAD               | TD           | CFA franc BEAC     | XAF           |
-         | SEYCHELLES         | SC           | Seychelles rupee   | SCR           |
-         | MADAGASCAR         | MG           | Malagasy ariary    | MGA           |
-         | MALAWI             | MW           | Malawian kwacha    | MWK           |
+### Example Successful Response
 
-<hr />
+```json
+{
+  "message": "Transaction successful",
+  "data": {
+    "amount": "5.00",
+    "customer_name": "Blessed Mwanza",
+    "customerMobileWallet": "0769641179",
+    "reference": "0762611179_1713450343",
+    "status": "successful"
+  },
+  "isError": false
+}
+```
 
+### Verifying a Payment
 
+To verify a payment, use the `verifyPayment` method:
 
-# This project was built/tested with
+1. **Verify the Payment**:
 
-- PHP 8
+   ```php
+   $transactionReference = 'your_transaction_reference'; // Replace with transaction reference
+   $verificationResponse = $moneyUnify->verifyPayment($transactionReference);
+   ```
+
+2. **Check the Verification Response**:
+
+   ```php
+   if ($verificationResponse->isError) {
+       echo "Error: " . $verificationResponse->message . "\n";
+       echo "Console: " . ($verificationResponse->console ?? 'No console message to debug') . "\n";
+   } else {
+       echo "Verification Success: " . $verificationResponse->message . "\n";
+       echo "Data: " . json_encode($verificationResponse->data) . "\n";
+   }
+   ```
+
+### Example Verification Response
+
+```json
+{
+  "message": "Transaction pending OTP confirmation",
+  "data": {
+    "amount": "1.00",
+    "customer_name": "Dilip Okafor",
+    "customerMobileWallet": "260975555555",
+    "reference": "0975555555_1713447717",
+    "status": "otp-required"
+  },
+  "isError": false
+}
+```
+
+### Settling Funds
+
+To settle the current virtual account balance, use the `settleFunds` method:
+
+1. **Settle Funds**:
+
+   ```php
+   $settleParams = [
+       'moneyunify_email' => 'your_email@example.com', // Replace with your MoneyUnify email
+       'receiver_first_name' => 'Blessed',
+       'receiver_last_name' => 'Mwanza',
+       'receiver_phone_number' => '0971943638', // Replace with receiver's phone number
+       'transaction_details' => 'Settling funds to the specified account.'
+   ];
+
+   $settlementResponse = $moneyUnify->settleFunds($settleParams);
+   ```
+
+2. **Check the Settlement Response**:
+
+   ```php
+   if ($settlementResponse->isError) {
+       echo "Error: " . $settlementResponse->message . "\n";
+       echo "Console: " . ($settlementResponse->console ?? 'No console message to debug') . "\n";
+   } else {
+       echo "Settlement Success: " . $settlementResponse->message . "\n";
+       echo "Data: " . json_encode($settlementResponse->data) . "\n";
+   }
+   ```
+
+### Example Successful Settlement Response
+
+```json
+{
+  "message": "Transaction successful",
+  "data": {
+    "amount": "9.29",
+    "customer_name": "BLESSED MWANZA",
+    "customerMobileWallet": "0971943638",
+    "reference": "Settlement_0971943638_1713460876",
+    "status": "successful"
+  },
+  "isError": false
+}
+```
+
+## Conclusion
+
+The MoneyUnify library simplifies the process of integrating with the Money Unify API. By following the steps outlined in this documentation, you can easily set up and make payment requests, verify transactions, and settle funds. For further assistance, feel free to reach out or check the official documentation for more advanced features.
 
 # Author
 
-👤 **Blessed Jason Mwanza** - [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj) 
+👤 **Blessed Jason Mwanza** - show support 💖🙌 [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj)
 
 - LinkedIn: [Connect with Blessed on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
-
-- Github : [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
-
-- Twitter : [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
-
-- Youtube : [Youtube](https://www.youtube.com/@blessedjasonmwanza)
+- Github: [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
+- Twitter: [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
+- Youtube: [Youtube](https://www.youtube.com/@blessedjasonmwanza)
 
 # 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues).
+
 # Show your support
 
-Give a ⭐️ if you like this project! or [Donate](https://www.buymeacoffee.com/mwanzabj) 
- 
+Give a ⭐️ if you like this project! or [Donate](https://www.buymeacoffee.com/mwanzabj)
