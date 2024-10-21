@@ -1,55 +1,77 @@
-# MoneyUnify Library PHP Documentation
+# MoneyUnify Payments API Library Documentation
 
-The **MoneyUnify** library provides an easy interface for integrating with the [MoneyUnify API](http://MoneyUnify.com) to process mobile money payments. This documentation will guide you through the installation process and demonstrate how to use the library effectively. support for multiple programming languages is available [here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da)
+The **MoneyUnify** Payments API library provides an easy interface for integrating with the [MoneyUnify API](http://MoneyUnify.com) to process mobile money payments. This documentation will guide you through the installation process and demonstrate how to use the library effectively. Support for multiple programming languages is available [here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da).
 
 - ### MoneyUnify - Payments in Zambia _(Recommended for businesses/individuals in Zambia)_
   > Instant settlements and repayments
 
-![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
+  ![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
 
-> Ideal for money collections in Zambia - Coming soon to **Tanzania**, **Nigeria**, **Kenya** 👀
+  > Ideal for money collections in Zambia - Coming soon to **Tanzania**, **Nigeria**, **Kenya** 👀
 
-- [x] **Make Collections** - Request mobile Money payments from _AIRTEL_, _MTN_, & _ZAMTEL_ (All Network operators in Zambia)
-- [x] **Settle Funds** - Disburse and Settle funds from your MoneyUnify Account to _MTN_, _Zamtel_, _MTN_ All Mobile Networks Instantly
-- [x] **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
-- #### SETUP
+  - [x] **Make Collections** - Request mobile Money payments from _AIRTEL_, _MTN_, & _ZAMTEL_ (All Network operators in Zambia)
+  - [x] **Settle Funds** - Disburse and settle funds from your MoneyUnify Account to _MTN_, _Zamtel_, _MTN_ All Mobile Networks Instantly
+  - [x] **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
+
+  #### SETUP
   - [x] It's easy and instant! 😃 Just [Create your account on MoneyUnify](https://dashboard.moneyunify.com/) to get your API key (MUID)
-  - [x] 📂 Check documentation below or [ here for more languages](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da) - Comes with some examples 😃 />
+  - [x] 📂 Check documentation below or [here for more languages](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da) - Comes with some examples 😃
   - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
-- #### Supported Countries on the Moneyunify endpoint
+
+  #### Supported Countries on the MoneyUnify Endpoint
   | Country  | Country Code | Currency           | Currency Code | Status         |
   | -------- | ------------ | ------------------ | ------------- | -------------- |
-  | ZAMBIA   | ZM           | Zambian kwacha     | ZMW           | Active ✔️      |
-  | TANZANIA | TZ           | Tanzanian shilling | TZS           | Coming Soon ⏰ |
-  | KENYA    | KE           | Kenyan shilling    | KES           | Coming Soon ⏰ |
-
-### Charges and FEES
+  | ZAMBIA   | ZM           | Zambian Kwacha     | ZMW           | Active ✔️      |
+  | TANZANIA | TZ           | Tanzanian Shilling | TZS           | Coming Soon ⏰ |
+  | KENYA    | KE           | Kenyan Shilling    | KES           | Coming Soon ⏰ |
 
 ---
 
-#### Collections (Receiving payments)
+## Table of Contents
+
+1. [Charges and Fees](#charges-and-fees)
+2. [Installation](#installation)
+3. [Usage](#usage)
+   - [Basic Usage](#basic-usage)
+   - [Verifying a Payment](#verifying-a-payment)
+   - [Settling Funds](#settling-funds)
+4. [Conclusion](#conclusion)
+5. [Author](#author)
+6. [🤝 Contributing](#contributing)
+7. [Show your Support](#show-your-support)
+
+---
+
+### Charges and Fees
+
+---
+
+#### Collections (Receiving Payments)
 
 > 2.5% + 1 ZMW per transaction (reduced from the initial ~3.5%~)
 
-##### Settlements / Transferring to mobile money
+##### Settlements / Transferring to Mobile Money
 
-| Settlement Account balance           | What you you'll receive | Charges/ Transaction Fees |
-| ------------------------------------ | ----------------------- | ------------------------- |
-| balance \[20 ZMW \~ 1,000 ZMW \]     | balance - 12            | 12 ZMW                    |
-| balance \[1,000 ZMW \~ 50,000 ZMW \] | balance - 20            | 20 ZMW                    |
-| balance \[ 50,000 \~ 100,000 ZMW \]  | balance - 30            | 30 ZMW                    |
+| Settlement Account Balance           | What You'll Receive | Charges/Transaction Fees |
+| ------------------------------------ | ------------------- | ------------------------- |
+| Balance \[20 ZMW ~ 1,000 ZMW\]      | Balance - 12        | 12 ZMW                    |
+| Balance \[1,000 ZMW ~ 50,000 ZMW\]  | Balance - 20        | 20 ZMW                    |
+| Balance \[50,000 ~ 100,000 ZMW\]    | Balance - 30        | 30 ZMW                    |
+
+---
 
 ## Installation
 
-Documentation Usage for languages other than PHP is {available here]()
+Documentation usage for languages other than PHP is available [here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da).
 
 1. **Install Composer** (if you haven’t already). Follow the [Composer installation guide](https://getcomposer.org/download/).
-
 2. **Install the MoneyUnify Library** by adding it to your `composer.json`:
 
    ```bash
    composer require blessedjasonmwanza/moneyunify
    ```
+
+---
 
 ## Usage
 
@@ -66,7 +88,7 @@ Documentation Usage for languages other than PHP is {available here]()
    ```php
    use Blessedjasonmwanza\MoneyUnify\MoneyUnify;
 
-   $muid = 'your_unique_muid'; // Replace with your actual MUID  - obtain it at https:/MoneyUnify.com
+   $muid = 'your_unique_muid'; // Replace with your actual MUID - obtain it at https://MoneyUnify.com
    $moneyUnify = new MoneyUnify($muid);
    ```
 
@@ -192,9 +214,15 @@ To settle the current virtual account balance, use the `settleFunds` method:
 }
 ```
 
+---
+
 ## Conclusion
 
 The MoneyUnify library simplifies the process of integrating with the Money Unify API. By following the steps outlined in this documentation, you can easily set up and make payment requests, verify transactions, and settle funds. For further assistance, feel free to reach out or check the official documentation for more advanced features.
+
+---
+
+# Author
 
 # Author
 
@@ -205,12 +233,12 @@ The MoneyUnify library simplifies the process of integrating with the Money Unif
 - Twitter: [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
 - Youtube: [Youtube](https://www.youtube.com/@blessedjasonmwanza)
 
-# 🤝 Contributing
+## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Feel free to contribute to this project by submitting a pull request. Your contributions help improve the library and enhance the experience for all users!
 
-Feel free to check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues).
+Feature requests are welcome! Check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues) or request a feature by creating a new issue.
 
-# Show your support
+## Show your Support
 
-Give a ⭐️ if you like this project! or [Donate](https://www.buymeacoffee.com/mwanzabj)
+If you find this library helpful, consider supporting it by sharing it with others or [donating](https://www.buymeacoffee.com/mwanzabj). Your support is greatly appreciated!
