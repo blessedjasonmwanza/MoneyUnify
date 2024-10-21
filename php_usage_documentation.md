@@ -1,6 +1,5 @@
 # MoneyUnify Library PHP Documentation
 
-## Introduction
 
 The **MoneyUnify** library provides an easy interface for integrating with the Money Unify API to process payments. This documentation will guide you through the installation process and demonstrate how to use the library effectively.
 
@@ -25,9 +24,9 @@ To use the MoneyUnify library, follow these steps:
 
 3. **Call the `requestPayment` Method**: This method takes the payer's phone number and the amount to pay as parameters.
 
-### Example Code
+### Example Code for Requesting a Payment
 
-Here’s an example demonstrating how to use the MoneyUnify library:
+Here’s an example demonstrating how to use the MoneyUnify library to request a payment:
 
 ```php
 <?php
@@ -58,15 +57,6 @@ if ($response->isError) {
 }
 ```
 
-### Explanation of the Code
-
-- **Line 1**: Loads Composer's autoload file, allowing you to use the MoneyUnify library.
-- **Line 5**: Imports the `MoneyUnify` class from the `Blessedjasonmwanza\MoneyUnify` namespace.
-- **Line 8**: Creates a new instance of the `MoneyUnify` class, passing in your unique MUID.
-- **Line 12**: Calls the `requestPayment` method with the payer's phone number and the payment amount.
-- **Lines 15-23**: Checks if there was an error in the response and handles it accordingly, or displays the success message.
-
-
 ### Example Successful Response
 
 Here’s an example of a successful transaction response from the Money Unify API:
@@ -84,28 +74,71 @@ Here’s an example of a successful transaction response from the Money Unify AP
     "isError": false
 }
 ```
+
+### Verifying a Payment
+
+To verify a payment after requesting it, you can use the `verifyPayment` method. Here's how you can implement it:
+
+1. **Call the `verifyPayment` Method**: This method takes the transaction reference as a parameter.
+
+### Example Code for Verifying a Payment
+
+```php
+// Assuming the previous code is already present...
+
+// Step 4: Verify the payment
+$transactionReference = 'your_transaction_reference'; // Replace with the transaction reference
+$verificationResponse = $moneyUnify->verifyPayment($transactionReference);
+
+// Step 5: Check the verification response
+if ($verificationResponse->isError) {
+    // Handle the error
+    echo "Error: " . $verificationResponse->message . "\n";
+    echo "Console: " . ($verificationResponse->console ?? 'No console message to debug') . "\n";
+} else {
+    // Verification was successful
+    echo "Verification Success: " . $verificationResponse->message . "\n";
+    echo "Data: " . json_encode($verificationResponse->data) . "\n";
+}
+```
+
+### Example Verification Response
+
+Here’s an example of a verification response from the Money Unify API:
+
+```json
+{
+  "message": "Transaction pending OTP confirmation",
+  "data": {
+    "amount": "1.00",
+    "customer_name": "Dilip Okafor",
+    "customerMobileWallet": "260975555555",
+    "reference": "0975555555_1713447717",
+    "status": "otp-required"
+  },
+  "isError": false
+}
+```
+
 ## Conclusion
 
-The MoneyUnify library simplifies the process of integrating with the Money Unify API. By following the steps outlined in this documentation, you can easily set up and make payment requests. For further assistance, feel free to reach out or check the official documentation for more advanced features.
-
+The MoneyUnify library simplifies the process of integrating with the Money Unify API. By following the steps outlined in this documentation, you can easily set up and make payment requests, as well as verify transactions. For further assistance, feel free to reach out or check the official documentation for more advanced features.
 
 # Author
 
-👤 **Blessed Jason Mwanza** - [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj) 
+👤 **Blessed Jason Mwanza** - [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj)
 
 - LinkedIn: [Connect with Blessed on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
-
-- Github : [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
-
-- Twitter : [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
-
-- Youtube : [Youtube](https://www.youtube.com/@blessedjasonmwanza)
+- Github: [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
+- Twitter: [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
+- Youtube: [Youtube](https://www.youtube.com/@blessedjasonmwanza)
 
 # 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues).
+
 # Show your support
 
-Give a ⭐️ if you like this project! or [Donate](https://www.buymeacoffee.com/mwanzabj) 
+Give a ⭐️ if you like this project! or [Donate](https://www.buymeacoffee.com/mwanzabj)

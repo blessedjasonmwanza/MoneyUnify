@@ -4,10 +4,10 @@ use Blessedjasonmwanza\MoneyUnify\MoneyUnify;
 
 require 'vendor/autoload.php';
 
-describe('Expect requestPayment feature to work properly', function () {
+describe('Expect verifyPayment feature to work properly', function () {
     $muid = '123'; // Presumably invalid muid for testing
     $moneyUnify = new MoneyUnify ($muid);
-    $requestToPay = $moneyUnify->requestPayment('0971943638', '10');
+    $requestToPay = $moneyUnify->verifyPayment('0975555555_1713447717');
 
     // Test if the result is a valid object
     it('is a valid object', function () use ($requestToPay) {
