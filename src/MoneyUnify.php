@@ -57,6 +57,46 @@ class MoneyUnify {
         $requestResponse = $this->urlRequest($this->verify_payment_url, $body_fields);
         return $this->urlRequestResponse($requestResponse);
     }
+
+        /**
+     * Settle current virtual account balance.
+     * This will move all your collections to a specified account 
+     * and zero your current balance (use with caution).
+     *
+     * @param array $params - An associative array containing the required parameters:
+     *                       - 'moneyunify_email': Your MoneyUnify email associated with your MoneyUnify ID (muid).
+     *                       - 'receiver_first_name': The first name of the receiver.
+     *                       - 'receiver_last_name': The last name of the receiver.
+     *                       - 'receiver_phone_number': The phone number of the receiver.
+     *                       - 'transaction_details': Details about the transaction.
+     * @return \stdClass transaction details of the response from the API.
+     * @throws InvalidArgumentException if any required parameters are missing.
+     */
+    public function settleFunds(array $params): \stdClass {
+        // Define the required parameters
+        $requiredParams = ['moneyunify_email', 'receiver_first_name', 'receiver_last_name', 'receiver_phone_number', 'transaction_details'];
+
+        // Check if all required parameters are present in $params
+        $missingParams = array_diff($requiredParams, array_keys($params));
+        if (!empty($missingParams)) {
+            $this->response->message = 'Missing required parameter(s)';
+            $this->response->console = $missingParams;
+            $this->response->isError = true;
+            return $this->response;
+        }
+        $body_fields = http_build_query([
+            'muid' => $this->muid,
+            'email' => $params['moneyunify_email'],
+            'first_name' => $params['receiver_first_name'],
+            'last_name' => $params['receiver_last_name'],
+            'phone_number' => $params['receiver_phone_number'],
+            'transaction_details' => $params['transaction_details']
+        ]);
+
+        $requestResponse = $this->urlRequest($this->verify_payment_url, $body_fields);
+        return $this->urlRequestResponse($requestResponse);
+    }
+
     /**
      * Processes the response from the API request.
      *
