@@ -8,8 +8,10 @@ namespace Blessedjasonmwanza\MoneyUnify;
  * This class provides methods to interact with the Money Unify API for processing payments.
  */
 class MoneyUnify {
+    private const BASE_URL = 'https://api.moneyunify.com/v2';
     private string $muid; // The unique identifier for the Money Unify account
-    private string $request_payment_url = "https://api.moneyunify.com/v2/request_payment"; // URL for payment requests
+    private string $request_payment_url = self::BASE_URL."/request_payment"; // URL for payment requests
+    private string $verify_payment_url = self::BASE_URL."/verify_transaction";
     public \stdClass $response; // Response object for API calls
 
     /**
@@ -27,7 +29,7 @@ class MoneyUnify {
      *
      * @param string $payer_phone_number The phone number of the payer.
      * @param string $amount_to_pay The amount to be paid.
-     * @return \stdClass The response from the API.
+     * @return \stdClass Transaction details of the response from the API.
      */
     public function requestPayment(string $payer_phone_number, string $amount_to_pay): \stdClass {
         $body_fields = http_build_query([
@@ -40,6 +42,21 @@ class MoneyUnify {
         return $this->urlRequestResponse($requestResponse);
     }
 
+    /**
+     * verify and get payment details of a transaction.
+     *
+     * @param string $transaction_reference id of the transaction.
+     * @return \stdClass transaction details the response from the API.
+     */
+    public function verifyPayment(string $transaction_reference): \stdClass{
+        $body_fields = http_build_query([
+            'muid' => $this->muid,
+            'reference' => $transaction_reference,
+        ]);
+
+        $requestResponse = $this->urlRequest($this->verify_payment_url, $body_fields);
+        return $this->urlRequestResponse($requestResponse);
+    }
     /**
      * Processes the response from the API request.
      *
