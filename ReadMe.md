@@ -130,8 +130,6 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 
 👤 **Blessed Jason Mwanza** - [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj) 
 
-- Portfolio : [https://blessedjasonmwanza.tech](https://blessedjasonmwanza.tech)
-
 - LinkedIn: [Connect with Blessed on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
 
 - Github : [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
@@ -145,8 +143,7 @@ Unlock the power of seamless financial **transactions in Africa** with MoneyUnif
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/blessedjasonmwanza/MoneyUnify/issues).
-
 # Show your support
 
-Give a ⭐️ if you like this project!
+Give a ⭐️ if you like this project! or [Donate](https://www.buymeacoffee.com/mwanzabj) 
  
