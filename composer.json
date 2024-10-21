@@ -1,0 +1,24 @@
+{
+    "name": "blessedjasonmwanza/moneyunify",
+    "description": "Payments API with primary focus on Mobile Money USSD payments.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Blessedjasonmwanza\\MoneyUnify\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Blessedjasonmwanza\\MoneyUnify\\": "tests/"
+        }
+    },
+    "authors": [
+        {   "role": "Developer",
+            "name": "Blessed Jason Mwanza",
+            "homepage": "https://github.com/blessedjasonmwanza"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    }
+}
