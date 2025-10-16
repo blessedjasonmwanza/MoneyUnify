@@ -1,6 +1,6 @@
 # MoneyUnify Payments API Library Documentation
 
-The [MoneyUnify](https://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. **MoneyUnify** allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
+The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. **MoneyUnify** allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
 
 ---
 
