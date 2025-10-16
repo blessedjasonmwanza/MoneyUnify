@@ -1,218 +1,89 @@
 # MoneyUnify Payments API Library Documentation
 
-The **MoneyUnify** Payments API library provides an easy interface for integrating with the [MoneyUnify API](http://MoneyUnify.com) to process mobile money payments. This documentation will guide you through the installation process and demonstrate how to use the library effectively. Support for multiple programming languages is available [here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da).
-
-- ### MoneyUnify - Payments in Zambia _(Recommended for businesses/individuals in Zambia)_
-  > Instant settlements and repayments
-
-  ![image](https://github.com/blessedjasonmwanza/MoneyUnify/assets/35315311/3b2db60b-cb0f-422f-af6f-04e9141a8f66)
-
-  > Ideal for money collections in Zambia - Coming soon to **Tanzania**, **Nigeria**, **Kenya** 👀
-
-  - [x] **Make Collections** - Request mobile Money payments from _AIRTEL_, _MTN_, & _ZAMTEL_ (All Network operators in Zambia)
-  - [x] **Settle Funds** - Disburse and settle funds from your MoneyUnify Account to _MTN_, _Zamtel_, _MTN_ All Mobile Networks Instantly
-  - [x] **🤙 Instant Customer support** available via - 📞 [WhatsApp](https://wa.me/+260971943638)
-
-  #### SETUP
-  - [x] It's easy and instant! 😃 Just [Create your account on MoneyUnify](https://dashboard.moneyunify.com/) to get your API key (MUID)
-  - [x] 📂 Check documentation below or [here for more languages](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da) - Comes with some examples 😃
-  - [x] 🤙 Customer support available via - 📞 [WhatsApp](https://wa.me/+260971943638)
-
-  #### Supported Countries on the MoneyUnify Endpoint
-  | Country  | Country Code | Currency           | Currency Code | Status         |
-  | -------- | ------------ | ------------------ | ------------- | -------------- |
-  | ZAMBIA   | ZM           | Zambian Kwacha     | ZMW           | Active ✔️      |
-  | TANZANIA | TZ           | Tanzanian Shilling | TZS           | Coming Soon ⏰ |
-  | KENYA    | KE           | Kenyan Shilling    | KES           | Coming Soon ⏰ |
+The [MoneyUnify](https://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. **MoneyUnify** allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
 
 ---
 
-## Table of Contents
+## 💸 Example: Request a Payment
 
-1. [Charges and Fees](#charges-and-fees)
-2. [Installation](#installation)
-3. [Usage](#usage)
-   - [Basic Usage](#basic-usage)
-   - [Verifying a Payment](#verifying-a-payment)
-   - [Settling Funds](#settling-funds)
-4. [Conclusion](#conclusion)
-5. [Author](#author)
-6. [🤝 Contributing](#contributing)
-7. [Show your Support](#show-your-support)
+```js
+fetch("https://api.moneyunify.one/request_payment", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  body: new URLSearchParams({
+    from_payer: "09xxxxxxxx",
+    amount: "1",
+    auth_id: "pub_69b9y3n0h0ydbq"
+  })
+})
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+````
 
----
-
-### Charges and Fees
-
----
-
-#### Collections (Receiving Payments)
-
-> 2.5% + 1 ZMW per transaction (reduced from the initial ~3.5%~)
-
-##### Settlements / Transferring to Mobile Money
-
-| Settlement Account Balance           | What You'll Receive | Charges/Transaction Fees |
-| ------------------------------------ | ------------------- | ------------------------- |
-| Balance \[20 ZMW ~ 1,000 ZMW\]      | Balance - 12        | 12 ZMW                    |
-| Balance \[1,000 ZMW ~ 50,000 ZMW\]  | Balance - 20        | 20 ZMW                    |
-| Balance \[50,000 ~ 100,000 ZMW\]    | Balance - 30        | 30 ZMW                    |
-
----
-
-## Installation
-
-Documentation usage for languages other than PHP is available [here](https://www.apidog.com/apidoc/shared-c8a1fbbb-8410-4978-8a64-937fc55186da).
-
-1. **Install Composer** (if you haven’t already). Follow the [Composer installation guide](https://getcomposer.org/download/).
-2. **Install the MoneyUnify Library** by adding it to your `composer.json`:
-
-   ```bash
-   composer require blessedjasonmwanza/moneyunify
-   ```
-
----
-
-## Usage
-
-### Basic Usage
-
-1. **Include the Autoload File**:
-
-   ```php
-   require 'vendor/autoload.php'; // Include Composer autoload
-   ```
-
-2. **Create an Instance of the `MoneyUnify` Class**:
-
-   ```php
-   use Blessedjasonmwanza\MoneyUnify\MoneyUnify;
-
-   $muid = 'your_unique_muid'; // Replace with your actual MUID - obtain it at https://MoneyUnify.com
-   $moneyUnify = new MoneyUnify($muid);
-   ```
-
-3. **Call the `requestPayment` Method**:
-
-   ```php
-   $payerPhoneNumber = '0xxxxxxxx'; // Replace with payer's phone number
-   $amountToPay = '10'; // Amount to be paid
-
-   $response = $moneyUnify->requestPayment($payerPhoneNumber, $amountToPay);
-   ```
-
-4. **Check the Response**:
-
-   ```php
-   if ($response->isError) {
-       echo "Error: " . $response->message . "\n";
-       echo "Console: " . ($response->console ?? 'No console message to debug') . "\n";
-   } else {
-       echo "Success: " . $response->message . "\n";
-       echo "Data: " . json_encode($response->data) . "\n";
-   }
-   ```
-
-### Example Successful Response
+### Example Response
 
 ```json
 {
-  "message": "Transaction successful",
+  "is_error": false,
+  "message": "Payment request initiated",
   "data": {
-    "amount": "5.00",
-    "customer_name": "Blessed Mwanza",
-    "customerMobileWallet": "0769641179",
-    "reference": "0762611179_1713450343",
-    "status": "successful"
-  },
-  "isError": false
+    "status": "success",
+    "message": "Transaction sent to payer",
+    "reference_id": "rp_vd89gdn10d1",
+    "amount": 10.00,
+    "cost": 0.3,
+    "transaction_type": "request_to_pay"
+  }
 }
 ```
 
-### Verifying a Payment
+---
 
-To verify a payment, use the `verifyPayment` method:
+## 🔍 Example: Verify a Payment
 
-1. **Verify the Payment**:
+```js
+fetch("https://api.moneyunify.one/verify_payment", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  body: new URLSearchParams({
+    reference_id: "rp_vd89gdn10d1",
+    auth_id: "pub_69b9y3n0h0ydbq"
+  })
+})
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+```
 
-   ```php
-   $transactionReference = 'your_transaction_reference'; // Replace with transaction reference
-   $verificationResponse = $moneyUnify->verifyPayment($transactionReference);
-   ```
-
-2. **Check the Verification Response**:
-
-   ```php
-   if ($verificationResponse->isError) {
-       echo "Error: " . $verificationResponse->message . "\n";
-       echo "Console: " . ($verificationResponse->console ?? 'No console message to debug') . "\n";
-   } else {
-       echo "Verification Success: " . $verificationResponse->message . "\n";
-       echo "Data: " . json_encode($verificationResponse->data) . "\n";
-   }
-   ```
-
-### Example Verification Response
+### Example Response
 
 ```json
 {
-  "message": "Transaction pending OTP confirmation",
+  "is_error": false,
+  "message": "Transaction verified successfully",
   "data": {
-    "amount": "1.00",
-    "customer_name": "Dilip Okafor",
-    "customerMobileWallet": "260975555555",
-    "reference": "0975555555_1713447717",
-    "status": "otp-required"
-  },
-  "isError": false
+    "status": "successful",
+    "reference_id": "rp_vd89gdn10d1",
+    "amount": 10.00,
+    "transaction_type": "request_to_pay",
+    "payer": "09xxxxxxxx",
+    "processed_at": "2025-10-16T14:25:33Z"
+  }
 }
 ```
 
-### Settling Funds
+---
 
-To settle the current virtual account balance, use the `settleFunds` method:
+**📘 Tip:**
+Use your `auth_id` from your [MoneyUnify Businesses Dashboard](http://moneyunify.one/businesses) to authenticate all API calls.
 
-1. **Settle Funds**:
-
-   ```php
-   $settleParams = [
-       'moneyunify_email' => 'your_email@example.com', // Replace with your MoneyUnify email
-       'receiver_first_name' => 'Blessed',
-       'receiver_last_name' => 'Mwanza',
-       'receiver_phone_number' => '0971943638', // Replace with receiver's phone number
-       'transaction_details' => 'Settling funds to the specified account.'
-   ];
-
-   $settlementResponse = $moneyUnify->settleFunds($settleParams);
-   ```
-
-2. **Check the Settlement Response**:
-
-   ```php
-   if ($settlementResponse->isError) {
-       echo "Error: " . $settlementResponse->message . "\n";
-       echo "Console: " . ($settlementResponse->console ?? 'No console message to debug') . "\n";
-   } else {
-       echo "Settlement Success: " . $settlementResponse->message . "\n";
-       echo "Data: " . json_encode($settlementResponse->data) . "\n";
-   }
-   ```
-
-### Example Successful Settlement Response
-
-```json
-{
-  "message": "Transaction successful",
-  "data": {
-    "amount": "9.29",
-    "customer_name": "BLESSED MWANZA",
-    "customerMobileWallet": "0971943638",
-    "reference": "Settlement_0971943638_1713460876",
-    "status": "successful"
-  },
-  "isError": false
-}
-```
 
 ---
 
@@ -221,8 +92,6 @@ To settle the current virtual account balance, use the `settleFunds` method:
 The MoneyUnify library simplifies the process of integrating with the Money Unify API. By following the steps outlined in this documentation, you can easily set up and make payment requests, verify transactions, and settle funds. For further assistance, feel free to reach out or check the official documentation for more advanced features.
 
 ---
-
-# Author
 
 # Author
 
