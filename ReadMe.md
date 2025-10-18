@@ -1,13 +1,15 @@
-# MoneyUnify Payments API Library Documentation
+# MoneyUnify Payments API Library - [Documentation](https://owk7kqf8sn.apidog.io/)
 
-The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. **MoneyUnify** allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
+The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. [**MoneyUnify**](http://moneyunify.one) allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
+
+- [Documentation for all programming languages](https://owk7kqf8sn.apidog.io/) can be accessed [HERE](https://owk7kqf8sn.apidog.io/)
 
 ---
 
 ## 💸 Example: Request a Payment
 
 ```js
-fetch("https://api.moneyunify.one/request_payment", {
+fetch("http://api.moneyunify.one/payments/request", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -28,16 +30,15 @@ fetch("https://api.moneyunify.one/request_payment", {
 
 ```json
 {
-  "is_error": false,
-  "message": "Payment request initiated",
-  "data": {
-    "status": "success",
-    "message": "Transaction sent to payer",
-    "reference_id": "rp_vd89gdn10d1",
-    "amount": 10.00,
-    "cost": 0.3,
-    "transaction_type": "request_to_pay"
-  }
+    "message": "Transaction Initiated Successfully",
+    "data": {
+        "status": "initiated",
+        "amount": 1,
+        "transaction_id": "sPX215101815432505",
+        "charges": 0.035,
+        "from_payer": "260971xxxxxxx"
+    },
+    "isError": false
 }
 ```
 
@@ -46,14 +47,14 @@ fetch("https://api.moneyunify.one/request_payment", {
 ## 🔍 Example: Verify a Payment
 
 ```js
-fetch("https://api.moneyunify.one/verify_payment", {
+fetch("http://api.moneyunify.one/payments/verify", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
     "Accept": "application/json"
   },
   body: new URLSearchParams({
-    reference_id: "rp_vd89gdn10d1",
+    transaction_id: "rp_vd89gdn10d1",
     auth_id: "pub_69b9y3n0h0ydbq"
   })
 })
@@ -66,18 +67,20 @@ fetch("https://api.moneyunify.one/verify_payment", {
 
 ```json
 {
-  "is_error": false,
-  "message": "Transaction verified successfully",
-  "data": {
-    "status": "successful",
-    "reference_id": "rp_vd89gdn10d1",
-    "amount": 10.00,
-    "transaction_type": "request_to_pay",
-    "payer": "09xxxxxxxx",
-    "processed_at": "2025-10-16T14:25:33Z"
-  }
+    "message": "Transaction processed Successfully",
+    "data": {
+        "status": "successful",
+        "amount": "1.00",
+        "transaction_id": "LP101815411535505",
+        "charges": "0.04",
+        "from_payer": "26097xxxxxxx"
+    },
+    "isError": false
 }
 ```
+
+### Other examples
+Find more examples for different programming languages [here](https://owk7kqf8sn.apidog.io/)
 
 ---
 
@@ -93,7 +96,7 @@ The MoneyUnify library simplifies the process of integrating with the Money Unif
 
 ---
 
-# Author
+# Built with a lot of ❤ by;
 
 👤 **Blessed Jason Mwanza** - show support 💖🙌 [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj)
 
