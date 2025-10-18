@@ -6,6 +6,23 @@ The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plug
 
 ---
 
+
+## Setup
+
+- Create an account on [MoneyUnify](http://moneyUnify.one)
+- Login and create your startup business from the [businesses section](http://moneyunify.one/businesses).
+- Grab your Auth key and follow the documentation to begin collecting repayments using any programming language of your choice.
+    
+- **No** need for bulk **KYC**. 🚫📝
+    
+- Customer support is available via - 📞 [WhatsApp ](https://wa.me/+260971943638) 🤙🏾
+    
+- **install Settlements and withdraws** through the API Dashboard to all mobile networks 🌍
+    
+- Collect Money from All 3 networks; `MTN`, `Airtel`, and `Zamtel` instantly. 🚀
+    
+
+
 ## 💸 Example: Request a Payment
 
 ```js
@@ -96,14 +113,15 @@ The MoneyUnify library simplifies the process of integrating with the Money Unif
 
 ---
 
-# Built with a lot of ❤ by;
+# >> Built with a lot of ❤ by />
 
-👤 **Blessed Jason Mwanza** - show support 💖🙌 [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj)
+👤 [**Blessed Jason Mwanza**](https://blessedjasonmwanza.github.io) - show support 💖🙌 [Buy him a Coffee](https://www.buymeacoffee.com/mwanzabj)
 
 - LinkedIn: [Connect with Blessed on LinkedIn](https://www.linkedin.com/in/blessedjasonmwanza)
 - Github: [@blessedjasonmwanza](https://github.com/blessedjasonmwanza)
-- Twitter: [Follow Blessed Jason @mwanzabj](https://twitter.com/mwanzabj)
+- X (Twitter): [Follow Blessed Jason @mwanzabj](https://x.com/mwanzabj)
 - Youtube: [Youtube](https://www.youtube.com/@blessedjasonmwanza)
+- Portfolio: [Portfolio](https://blessedjasonmwanza.github.io)
 
 ## 🤝 Contributing
 
