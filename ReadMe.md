@@ -1,6 +1,6 @@
 # MoneyUnify Payments API Library - [Documentation](https://owk7kqf8sn.apidog.io/)
 
-The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. [**MoneyUnify**](http://moneyunify.one) allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
+The [MoneyUnify](https://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. [**MoneyUnify**](https://moneyunify.one) allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
 
 - [Documentation for all programming languages](https://owk7kqf8sn.apidog.io/) can be accessed [HERE](https://owk7kqf8sn.apidog.io/)
 
@@ -12,8 +12,8 @@ The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plug
 
 ## Setup
 
-- Create an account on [MoneyUnify](http://moneyUnify.one)
-- Login and create your startup business from the [businesses section](http://moneyunify.one/businesses).
+- Create an account on [MoneyUnify](https://moneyUnify.one)
+- Login and create your startup business from the [businesses section](https://moneyunify.one/businesses).
 - Grab your Auth key and follow the documentation to begin collecting repayments using any programming language of your choice.
     
 - **No** need for bulk **KYC**. 🚫📝
@@ -29,7 +29,7 @@ The [MoneyUnify](http://moneyunify.one) is a developer-friendly API Library plug
 ## 💸 Example: Request a Payment
 
 ```js
-fetch("http://api.moneyunify.one/payments/request", {
+fetch("https://api.moneyunify.one/payments/request", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -67,7 +67,7 @@ fetch("http://api.moneyunify.one/payments/request", {
 ## 🔍 Example: Verify a Payment
 
 ```js
-fetch("http://api.moneyunify.one/payments/verify", {
+fetch("https://api.moneyunify.one/payments/verify", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -105,7 +105,7 @@ Find more examples for different programming languages [here](https://owk7kqf8sn
 ---
 
 **📘 Tip:**
-Use your `auth_id` from your [MoneyUnify Businesses Dashboard](http://moneyunify.one/businesses) to authenticate all API calls.
+Use your `auth_id` from your [MoneyUnify Businesses Dashboard](https://moneyunify.one/businesses) to authenticate all API calls.
 
 
 ---
