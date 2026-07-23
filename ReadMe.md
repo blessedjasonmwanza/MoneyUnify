@@ -1,120 +1,19 @@
-# MoneyUnify Payments API Library - [Documentation](https://owk7kqf8sn.apidog.io/)
+# MoneyUnify Payments switch for mobile money in Africa - [Documentation](https://moneyunify.one/)
 
-The [MoneyUnify](https://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. [**MoneyUnify**](https://moneyunify.one) allows you to easily Validate your ideas with confidence and supports mobile money payments for all network operators 🚀
+> If you found this project helpful or would like to help keep the developer enhancing it, please consider buying him a coffee by  [donating](https://www.buymeacoffee.com/mwanzabj). Your support is greatly appreciated!
 
-- [Documentation for all programming languages](https://owk7kqf8sn.apidog.io/) can be accessed [HERE](https://owk7kqf8sn.apidog.io/)
 
-<img width="1466" height="842" alt="image" src="https://github.com/user-attachments/assets/36e77ac5-0384-47cc-b329-cfc07512d8de" />
+### ‼️👉 The Developer has moved this project to be actively maintained on the [MoneyUnify Switch](https://github.com/moneyUnify/mu-switch) official repository.
 
+The [MoneyUnify](https://moneyunify.one) is a developer-friendly API Library plugin to accept payments, instant transfers, split payments, send payouts, and manage your startup business easily. [**MoneyUnify**](https://moneyunify.one) allows you to easily validate your ideas with confidence and supports mobile money payments for all network operators. 🚀 **Most importantly** "The MoneyUnify Switch allows you to have a central point and a single api endpoint to route all transactions across all payment providers in Africa"
 
 ---
 
 
 ## Setup
-
-- Create an account on [MoneyUnify](https://moneyUnify.one)
-- Login and create your startup business from the [businesses section](https://moneyunify.one/businesses).
-- Grab your Auth key and follow the documentation to begin collecting repayments using any programming language of your choice.
-    
-- **No** need for bulk **KYC**. 🚫📝
-    
-- Customer support is available via - 📞 [WhatsApp ](https://wa.me/+260971943638) 🤙🏾
-    
-- **install Settlements and withdraws** through the API Dashboard to all mobile networks 🌍
-    
-- Collect Money from All 3 networks; `MTN`, `Airtel`, and `Zamtel` instantly. 🚀
-    
-
-
-## 💸 Example: Request a Payment
-
-```js
-fetch("https://api.moneyunify.one/payments/request", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Accept": "application/json"
-  },
-  body: new URLSearchParams({
-    from_payer: "09xxxxxxxx",
-    amount: "1",
-    auth_id: "pub_69b9y3n0h0ydbq"
-  })
-})
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
-````
-
-### Example Response
-
-```json
-{
-    "message": "Transaction Initiated Successfully",
-    "data": {
-        "status": "initiated",
-        "amount": 1,
-        "transaction_id": "sPX215101815432505",
-        "charges": 0.035,
-        "from_payer": "260971xxxxxxx"
-    },
-    "isError": false
-}
-```
-
+- All information and guidance on how to set up the MoneyUnify Switch locally is available on the [MoneyUnify.com](https://moneyUnify.com) website and also on the [source code repository](https://github.com/moneyUnify/mu-switch)
 ---
 
-## 🔍 Example: Verify a Payment
-
-```js
-fetch("https://api.moneyunify.one/payments/verify", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Accept": "application/json"
-  },
-  body: new URLSearchParams({
-    transaction_id: "rp_vd89gdn10d1",
-    auth_id: "pub_69b9y3n0h0ydbq"
-  })
-})
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
-```
-
-### Example Response
-
-```json
-{
-    "message": "Transaction processed Successfully",
-    "data": {
-        "status": "successful",
-        "amount": "1.00",
-        "transaction_id": "LP101815411535505",
-        "charges": "0.04",
-        "from_payer": "26097xxxxxxx"
-    },
-    "isError": false
-}
-```
-
-### Other examples
-Find more examples for different programming languages [here](https://owk7kqf8sn.apidog.io/)
-
----
-
-**📘 Tip:**
-Use your `auth_id` from your [MoneyUnify Businesses Dashboard](https://moneyunify.one/businesses) to authenticate all API calls.
-
-
----
-
-## Conclusion
-
-The MoneyUnify library simplifies the process of integrating with the Money Unify API. By following the steps outlined in this documentation, you can easily set up and make payment requests, verify transactions, and settle funds. For further assistance, feel free to reach out or check the official documentation for more advanced features.
-
----
 
 # >> Built with a lot of ❤ by />
 
